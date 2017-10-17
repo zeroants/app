@@ -1,0 +1,1 @@
+<div class="title"><a target="_blank" href="[field:typeurl/]"  class="fr">¸ü¶à</a><a target="_blank" href="[field:typeurl/]"><strong>[field:typename/]</strong></a>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Breathe</title>
+        <!--        META SECTION-->
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=false" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+
+
+
+        <!--        STYLES SECTION -->
+
+        <link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/css/jquery.mobile-1.0.min.css" /> 
+        <link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/css/lightGreen.css" />
+        
+        
+        
+        
+
+        <!--        FONTS SECTION 
+
+        <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+        -->
+
+
+
+        <!--        SCRIPT SECTION -->
+
+        <script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/jquery.js"></script>
+        <script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/jquery.mobile-1.0.min.js"></script> 
+
+    </head>
+    <body>
+        <!--    Page initialization      -->
+        <div data-role="page">
+
+
+
+            <!--            Header-->
+            {dede:include filename="head.htm"/}
+            </header>
+            <!--         Heder     END  -->
+
+
+
+
+            <!--            Main Content-->
+            <section data-role="content" class="wrappedWidth" id="index">
+                <div class="section-image">
+                    <img class="mainIMG" src="{dede:global.cfg_templets_skin/}/images/refimages/aboutme.jpg" alt="About me" />
+                    <h2>About me</h2>
+                    <div class="article-wrapper">
+                        <p>Nam vestibulum, orci sit amet pellentesque molestie, tellus augue varius erat, a euismod augue arcu eu dui. Duis sollicitudin sapien a diam bibendum viverra. Donec congue iaculis porttitor. </p>
+                        <p>Ut est odio, ornare at pretium aliquet, posuere vitae dolor. <a href="#">Duis arcu velit</a>, blandit eget suscipit dapibus, condimentum vel ligula. </p>
+                    </div>
+                </div>
+
+
+
+
+
+                <!--                Latest news section-->
+                <section id="latest-news">
+                    <div class="section-image">
+                        <a href="blog.html"><img class="mainIMG" src="{dede:global.cfg_templets_skin/}/images/refimages/04.jpg" alt="Latest News" /></a>
+                        <h2>Latest news</h2>
+                        <div class="article-wrapper">
+                            <article>
+                                <a href="blog-single.html"><h4>Our Latest Blog post</h4></a>
+                                <span class="date-info">January 23, 2012</span>
+                                <span class="comment-info">3 Comments</span>
+                            </article>
+                            <hr />
+                            <article>
+                                <a href="blog-single.html"><h4>Another blog post</h4></a>
+                                <span class="date-info">December 24, 2011</span>
+                                <span class="comment-info">0 Comments</span>
+                            </article>
+                            <hr />
+                            <article>
+                                <a href="blog-single.html"><h4>Short one</h4></a>
+                                <span class="date-info">September 7, 2011</span>
+                                <span class="comment-info">7 Comments</span>
+                            </article>
+                        </div>
+                    </div>
+                </section>
+
+
+
+                <section id="latest-projects">
+                    <div class="section-image">
+                        <div class="ui-grid-a">
+                            <div class="ui-block-a portfolio-featured">
+                                <a href="portfolio-single.html">
+                                    <h4>Tree of life</h4>
+                                    <img src="{dede:global.cfg_templets_skin/}/images/refimages/01.jpg" alt="01" />
+                                </a>
+                            </div>
+                            <div class="ui-block-b portfolio-featured">
+                                <a href="portfolio-single.html">
+                                    <h4>Fantasy bridge</h4>
+                                    <img src="{dede:global.cfg_templets_skin/}/images/refimages/02.jpg" alt="02" />
+                                </a>
+                            </div>
+                            <div class="ui-block-a portfolio-featured">
+                                <a href="portfolio-single.html">
+                                    <h4>Photography of grass</h4>
+                                    <img src="{dede:global.cfg_templets_skin/}/images/refimages/03.jpg" alt="03" />
+                                </a>
+                            </div>
+                            <div class="ui-block-b portfolio-featured">
+                                <a href="portfolio-single.html">
+                                    <h4>City at night</h4>
+                                    <img src="{dede:global.cfg_templets_skin/}/images/refimages/04.jpg" alt="04" />
+                                </a>
+                            </div>
+                        </div>
+                        <div class="article-wrapper">
+                            <a href="portfolio.html"><h3>Latest projects</h3></a>
+                            <p>Suspendisse at erat eros. Nunc vel sem sed dui faucibus placerat bibendum ut velit. Morbi porttitor congue nibh in euismod. Curabitur sed urna quis turpis interdum tempor pharetra vehicula lacus. Vestibulum quam nulla, consectetur vitae pharetra ut, congue nec quam.</p>
+                        </div>
+                    </div>
+                </section>
+            </section>
+            <!--  Main Content     END  -->
+
+
+
+
+
+
+            <!--         Footer   -->
+             {dede:include filename="footer.htm"/}
+            <!--  Footer     END  -->  
+
+        </div>
+        <!--     Page initialization    END  -->
+    </body>
+</html>

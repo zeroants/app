@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Breathe</title>
+        <!--        META SECTION-->
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=false" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+
+
+
+        <!--        STYLES SECTION -->
+
+        <link rel="stylesheet" href="/templets/default/css/jquery.mobile-1.0.min.css" /> 
+        <link rel="stylesheet" href="/templets/default/css/lightGreen.css" />
+
+        <!--        FONTS SECTION -->
+
+        <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+
+
+
+
+        <!--        SCRIPT SECTION -->
+
+        <script type="text/javascript" src="/templets/default/js/jquery.js"></script>
+        <script type="text/javascript" src="/templets/default/js/jquery.mobile-1.0.min.js"></script> 
+
+    </head>
+    <body>
+        <!--    Page initialization      -->
+        <div data-role="page" data-theme="a">
+
+
+
+            <!--            Header-->
+            <header data-role="header">
+                <h1>www.mooc.im</h1>
+                
+                
+                <nav class="ui-grid-c">
+                    <div class="ui-block-a"><a href="/" data-transition="flip">Home</a></div>
+                    
+                    
+                   
+                     <div class="ui-block-b"><a href='/plus/list.php?tid=6'  data-transition="flip"> Works</a></div>
+                     
+                     <div class='ui-block-b'><a href='/plus/list.php?tid=1'  rel='dropmenu1'>BLOG</a></div>
+                   
+                     <div class="ui-block-b"><a href='/plus/list.php?tid=12'  data-transition="flip"> CONTACT</a></div>
+                     
+                      
+                </nav>
+                <hr class="divider" />
+            </header>
+            
+           
+                    
+            <!--         Heder     END  -->
+
+
+
+
+            <!--            Main Content-->
+            <section data-role="content" class="wrappedWidth" id="blog-single">
+                <!--                Main Article-->
+                
+                <article>
+                    <img class="mainIMG" src="[field:litpic/]" alt="Main Blog Image" />
+                    <h2>表格中单元格之间分隔线的隐藏方法</h2>
+                    <div class="article-wrapper">
+                        <span class="date-info">2010-04-07 09:29</span>
+                        <span class="comment-info"> Comments</span>
+                        <p>
+                           <table class="t" cellspacing="0" cellpadding="8" width="100%" border="0"><tbody><tr><td width="220"><table cellspacing="0" cellpadding="0" rules="cols" width="200" border="1"><tbody><tr align="center"><td>第</td><td>一</td><td>行</td></tr><tr align="center"><td>第</td><td>二</td><td>行</td></tr><tr align="center"><td>第</td><td>三</td><td>行</td></tr></tbody></table></td><td width="380">这个表格去掉了单元格之间的纵向分隔线</td></tr><tr><td><br /><table cellspacing="0" cellpadding="0" rules="rows" width="200" border="1"><tbody><tr align="center"><td>第</td><td>第</td><td>第</td></tr><tr align="center"><td>一</td><td>二</td><td>三</td></tr><tr align="center"><td>列</td><td>列</td><td>列</td></tr></tbody></table><br /></td><td>这个表格去掉了单元格之间的横向分隔线</td></tr><tr><td><table cellspacing="0" cellpadding="0" rules="none" width="200" border="1"><tbody><tr align="center"><td>横</td><td>&nbsp;</td><td>线</td></tr><tr align="center"><td>竖</td><td>&nbsp;</td><td>线</td></tr><tr align="center"><td>都</td><td>没</td><td>了</td></tr></tbody></table></td><td>这个表格去掉了单元格之间的纵向分隔线和横向分隔线</td></tr><tr><td colspan="2"><hr color="#000000" size="1" />其实上面的三个表格都有三行三列，隐藏分隔线的诀窍在于rules，察看这三个表格的源代码，我们可以看到<TABLE>标签中都有rules。 它有三个参数(cols,rows,none)，当rules=cols时，表格会隐藏纵向的分隔线，这样我们就只能看到表格的行；当rules=rows时，则 隐藏了横向的分隔线，这样我们只能看到表格的列；而当rules=none时，纵向分隔线和横向分隔线将全部隐藏。</td></tr></tbody></table>
+            <p align="center"> </p>
+                        </p>
+                        <hr />
+                        <p>
+                            <strong>Tags:</strong> Blog, Breathe, City
+                        </p>
+                    </div>
+
+                </article>
+
+
+
+
+
+
+
+
+                <!--                    Comments Section-->
+                <section id="commentSection">
+                    <div>
+                        <img src="images/refimages/comment3.jpg" alt="Comment" />
+                        <h6>Arnold J. Rimmer</h6>
+                        <span>17 hours ago</span>
+                        <p>Duis sollicitudin sapien a diam bibendum viverra. Donec congue iaculis porttitor. Ut est odio, ornare at pretium aliquet, posuere vitae dolor. Duis arcu velit, blandit eget suscipit dapibus, condimentum vel ligula.</p>
+                    </div>
+                    <div>
+                        <img src="images/refimages/comment2.jpg" alt="Comment" />
+                        <h6>Dave Lister</h6>
+                        <span>21 hours ago</span>
+                        <p>Cras viverra consequat elit, et blandit nulla euismod venenatis. Fusce mattis erat tempus velit aliquam faucibus. </p>
+                    </div>
+                    <div>
+                        <img src="images/refimages/comment1.jpg" alt="Comment" />
+                        <h6>Kryten</h6>
+                        <span>3 days ago</span>
+                        <p>
+                            Etiam luctus egestas nibh et ornare. Phasellus erat mauris, eleifend id facilisis sed, bibendum nec metus. Aliquam dictum elementum porttitor. Integer quam nibh, tempor eu imperdiet at, faucibus feugiat nulla. Vivamus urna felis, dignissim id gravida et, ultrices eu odio. 
+                        </p>
+                        <p>
+                            Vestibulum id ligula nulla, sed sagittis erat. Fusce tempor sodales lectus eget porttitor. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. 
+                        </p>
+                    </div>
+                </section>
+
+
+
+
+
+
+
+
+
+
+                <!--                Comment Form Section-->
+                <section id="CommentForm">
+                    <h2>Leave a comment</h2>
+                    <form action="#">
+                        <input type="text" name="name" id="name" value="" placeholder="Username" />
+                        <input type="text" name="mail" id="mail" value="" placeholder="Mail" />
+                        <textarea name="text" id="text" cols="30" rows="10" placeholder="Text" ></textarea>
+                        <input type="button" value="Submit" name="submit" />
+                    </form>
+                </section>
+                <!--    Comment form section    END  -->
+
+
+            </section>
+            <!--  Main Content     END  -->
+
+
+
+
+
+
+            <!--         Footer   -->
+             
+<!-- //底部模板 -->
+
+  <footer data-role="footer" data-theme="a" data-position="inline">
+                <hr class="divider" />
+                <h4>Follow me on</h4>
+                <div class="ui-grid-c wrappedWidth shareIcons">
+                    <div class="ui-block-a"><a href="#"><img src="/templets/default/images/lightGreen/fb.png" alt="Facebook" /></a></div>
+                    <div class="ui-block-b"><a href="#"><img src="/templets/default/images/lightGreen/digg.png" alt="Digg" /></a></div>
+                    <div class="ui-block-c"><a href="#"><img src="/templets/default/images/lightGreen/twitter.png" alt="Twitter" /></a></div>
+                    <div class="ui-block-d"><a href="#"><img src="/templets/default/images/lightGreen/rss.png" alt="RSS" /></a></div>
+                </div>
+
+                <h4>Text Widget</h4>
+                <p>Dit augue est, elementum id commodo sit amet, pellentesque vel mi.
+                    Nulla eu ante id ligula posuere pellentesque. Vivamus rhoncus mattis tellus
+                    vitae pretium. Vestibulum ullamcorper congue nisl eget suscipit. Aenean feugiat odio 
+                    a velit scelerisque consequat. Fusce congue ipsum quis felis condimentum auctor tincidunt 
+                    erat scelerisque. Vestibulum ante ipsum <a href="#">primis in faucibus</a> orci luctus et ultrices posuere 
+                    cubilia Curae; Nullam purus eros, consequat in blandit non, adipiscing ut ipsum. In eu diam 
+                    lorem. 
+                </p>
+
+                <nav class="ui-grid-c">
+                    <div class="ui-block-a"><a href="index.html" data-transition="flip">Home</a></div>
+                    <div class="ui-block-b"><a href="portfolio.html" data-transition="flip">Portfolio</a></div>
+                    <div class="ui-block-c"><a class="navSelected" href="blog.html" data-transition="flip">Blog</a></div>
+                    <div class="ui-block-d"><a href="contact.html" data-transition="flip">Contact</a></div>
+                </nav>
+            </footer>  
+    
+            <!--  Footer     END  -->  
+
+        </div>
+        <!--     Page initialization    END  -->
+    </body>
+</html>

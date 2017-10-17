@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Breathe</title>
+        <!--        META SECTION-->
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=false" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+
+
+
+        <!--        STYLES SECTION -->
+
+        <link rel="stylesheet" href="/templets/default/css/jquery.mobile-1.0.min.css" /> 
+        <link rel="stylesheet" href="/templets/default/css/lightGreen.css" />
+
+        <!--        FONTS SECTION -->
+
+        <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+
+
+
+
+        <!--        SCRIPT SECTION -->
+
+        <script type="text/javascript" src="/templets/default/js/jquery.js"></script>
+        <script type="text/javascript" src="/templets/default/js/jquery.mobile-1.0.min.js"></script> 
+
+    </head>
+    <body>
+        <!--    Page initialization      -->
+        <div data-role="page" data-theme="a">
+
+
+
+            <!--            Header-->
+            <header data-role="header">
+                <h1>www.mooc.im</h1>
+                
+                
+                <nav class="ui-grid-c">
+                    <div class="ui-block-a"><a href="/" data-transition="flip">Home</a></div>
+                    
+                    
+                   
+                     <div class="ui-block-b"><a href='/plus/list.php?tid=6'  data-transition="flip"> Works</a></div>
+                     
+                     <div class='ui-block-b'><a href='/plus/list.php?tid=1'  rel='dropmenu1'>BLOG</a></div>
+                   
+                     <div class="ui-block-b"><a href='/plus/list.php?tid=12'  data-transition="flip"> CONTACT</a></div>
+                     
+                      
+                </nav>
+                <hr class="divider" />
+            </header>
+            
+           
+                    
+            <!--         Heder     END  -->
+
+
+
+
+            <!--            Main Content-->
+            <section data-role="content" class="wrappedWidth" id="blog-single">
+                <!--                Main Article-->
+                
+                <article>
+                    <img class="mainIMG" src="[field:litpic/]" alt="Main Blog Image" />
+                    <h2>浅谈XHTML（可扩展HTML）标准中CDATA</h2>
+                    <div class="article-wrapper">
+                        <span class="date-info">2010-04-07 09:29</span>
+                        <span class="comment-info"> Comments</span>
+                        <p>
+                           近来，随着XHTML（可扩展HTML）标准的出现，<script/>标签也经历了一些改变。该标签不再用language特性，而用type特性声明内嵌代码或要加入的外部文件的mime类型，JavaScript的mime类型是"text/javascript"。例如：<p class="code"><html>&nbsp; <br />　<head>&nbsp; <br />　<title>Title of Page</title>&nbsp; <br />　<script type=”text/javascript”>&nbsp; <br />　var i = 0;&nbsp;&nbsp; <br />　</script>&nbsp; <br />　<script type=”text/javascript” src=”../scripts/external.js”></script>&nbsp; <br />　</head>&nbsp; <br />　<body>&nbsp; <br />　<!-- body goes here -->&nbsp; <br />　</body>&nbsp; <br /></html>&nbsp; </p><p>　　即使许多浏览器不完全支持XHTML，但大多数开发者现在都用type特性，而不用language特性，以提供更好的XHTML支持。省略language特性不会带来任何问题，因为如前所述，所有浏览器都默认<script/>的该属性值为JavaScript。</p><p>　　XHTML的第二个改变是使用CDATA段。XML中的CDATA段用于声明不应被解析为标签的文本（XHTML也是如此），这样就可以使用特殊字符，如小于（<）、大于（>）、和号（&）和双引号（"），而不必使用它们的字符实体。考虑下面的代码：</p><p class="code"><SCRIPT type=”text/javascript”>&nbsp; <br />　function compare(a, b) {&nbsp; <br />　if (a < b) {&nbsp; <br />　alert(“A is less than B”);&nbsp; <br />　} else if (a > b) {&nbsp; <br />　alert(“A is greater than B”);&nbsp; <br />　} else {&nbsp; <br />　alert(“A is equal to B”);&nbsp; <br />　}&nbsp; <br />}&nbsp; <br /></SCRIPT>&nbsp; </p><p>　　这个函数相当简单，它比较数字a和b，然后显示消息说明它们的关系。但是，在XHTML中，这段代码是无效的，因为它使用了三个特殊符号，即小于、大于和双引号。要修正这个问题，必须分别用这三个字符的XML实体<、>和"替换它们：</p><p class="code"><SCRIPT type=”text/javascript”>&nbsp; <br />function compare(a, b) {&nbsp; <br />if (a < b) {&nbsp; <br />alert("A is less than B");&nbsp; <br />} else if (a > b) {&nbsp; <br />131&nbsp; <br />JavaScript in the Browser&nbsp; <br />alert("A is greater than B");&nbsp; <br />} else {&nbsp; <br />alert("A is equal to B");&nbsp; <br />}&nbsp; <br />}&nbsp; <br /></SCRIPT>&nbsp; </p><p>　　这段代码存在两个问题。首先，开发者不习惯用XML实体编写代码。这使代码很难读懂。其次，在JavaScript中，这种代码实际上将视为有语法错，因为解释程序不知道XML实体的意思。用CDATA段即可以以常规形式（即易读的语法）编写JavaScript代码。正式加入CDATA段的方法如下：</p><p class="code"><SCRIPT type=”text/javascript”><br /><![CDATA[&nbsp; <br />function compare(a, b) {&nbsp; <br />if (a < b) {&nbsp; <br />alert(“A is less than B”);&nbsp; <br />} else if (a > b) {&nbsp; <br />alert(“A is greater than B”);&nbsp; <br />} else {&nbsp; <br />alert(“A is equal to B”);&nbsp; <br />}&nbsp; <br />}&nbsp; <br />]]><br /></SCRIPT></p><p>　　虽然这是正式方式，但还要记住，大多数浏览器都不完全支持XHTML，这就带来主要问题，即这在JavaScript中是个语法错误，因为大多数浏览器还不认识CDATA段。</p><p>　　当前使用的解决方案模仿了“对旧浏览器隐藏”代码的方法。使用单行的JavaScript注释，可在不影响代码语法的情况下嵌入CDATA段：</p><p class="code"><SCRIPT type=”text/javascript”>&nbsp; <br />//<![CDATA[&nbsp; <br />function compare(a, b) {&nbsp; <br />if (a < b) {&nbsp; <br />alert(“A is less than B”);&nbsp; <br />} else if (a > b) {&nbsp; <br />alert(“A is greater than B”);&nbsp; <br />} else {&nbsp; <br />alert(“A is equal to B”);&nbsp; <br />}&nbsp; <br />}&nbsp; <br />//]]>&nbsp; <br /></SCRIPT></p>
+            <p align="center"> </p>
+                        </p>
+                        <hr />
+                        <p>
+                            <strong>Tags:</strong> Blog, Breathe, City
+                        </p>
+                    </div>
+
+                </article>
+
+
+
+
+
+
+
+
+                <!--                    Comments Section-->
+                <section id="commentSection">
+                    <div>
+                        <img src="images/refimages/comment3.jpg" alt="Comment" />
+                        <h6>Arnold J. Rimmer</h6>
+                        <span>17 hours ago</span>
+                        <p>Duis sollicitudin sapien a diam bibendum viverra. Donec congue iaculis porttitor. Ut est odio, ornare at pretium aliquet, posuere vitae dolor. Duis arcu velit, blandit eget suscipit dapibus, condimentum vel ligula.</p>
+                    </div>
+                    <div>
+                        <img src="images/refimages/comment2.jpg" alt="Comment" />
+                        <h6>Dave Lister</h6>
+                        <span>21 hours ago</span>
+                        <p>Cras viverra consequat elit, et blandit nulla euismod venenatis. Fusce mattis erat tempus velit aliquam faucibus. </p>
+                    </div>
+                    <div>
+                        <img src="images/refimages/comment1.jpg" alt="Comment" />
+                        <h6>Kryten</h6>
+                        <span>3 days ago</span>
+                        <p>
+                            Etiam luctus egestas nibh et ornare. Phasellus erat mauris, eleifend id facilisis sed, bibendum nec metus. Aliquam dictum elementum porttitor. Integer quam nibh, tempor eu imperdiet at, faucibus feugiat nulla. Vivamus urna felis, dignissim id gravida et, ultrices eu odio. 
+                        </p>
+                        <p>
+                            Vestibulum id ligula nulla, sed sagittis erat. Fusce tempor sodales lectus eget porttitor. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. 
+                        </p>
+                    </div>
+                </section>
+
+
+
+
+
+
+
+
+
+
+                <!--                Comment Form Section-->
+                <section id="CommentForm">
+                    <h2>Leave a comment</h2>
+                    <form action="#">
+                        <input type="text" name="name" id="name" value="" placeholder="Username" />
+                        <input type="text" name="mail" id="mail" value="" placeholder="Mail" />
+                        <textarea name="text" id="text" cols="30" rows="10" placeholder="Text" ></textarea>
+                        <input type="button" value="Submit" name="submit" />
+                    </form>
+                </section>
+                <!--    Comment form section    END  -->
+
+
+            </section>
+            <!--  Main Content     END  -->
+
+
+
+
+
+
+            <!--         Footer   -->
+             
+<!-- //底部模板 -->
+
+  <footer data-role="footer" data-theme="a" data-position="inline">
+                <hr class="divider" />
+                <h4>Follow me on</h4>
+                <div class="ui-grid-c wrappedWidth shareIcons">
+                    <div class="ui-block-a"><a href="#"><img src="/templets/default/images/lightGreen/fb.png" alt="Facebook" /></a></div>
+                    <div class="ui-block-b"><a href="#"><img src="/templets/default/images/lightGreen/digg.png" alt="Digg" /></a></div>
+                    <div class="ui-block-c"><a href="#"><img src="/templets/default/images/lightGreen/twitter.png" alt="Twitter" /></a></div>
+                    <div class="ui-block-d"><a href="#"><img src="/templets/default/images/lightGreen/rss.png" alt="RSS" /></a></div>
+                </div>
+
+                <h4>Text Widget</h4>
+                <p>Dit augue est, elementum id commodo sit amet, pellentesque vel mi.
+                    Nulla eu ante id ligula posuere pellentesque. Vivamus rhoncus mattis tellus
+                    vitae pretium. Vestibulum ullamcorper congue nisl eget suscipit. Aenean feugiat odio 
+                    a velit scelerisque consequat. Fusce congue ipsum quis felis condimentum auctor tincidunt 
+                    erat scelerisque. Vestibulum ante ipsum <a href="#">primis in faucibus</a> orci luctus et ultrices posuere 
+                    cubilia Curae; Nullam purus eros, consequat in blandit non, adipiscing ut ipsum. In eu diam 
+                    lorem. 
+                </p>
+
+                <nav class="ui-grid-c">
+                    <div class="ui-block-a"><a href="index.html" data-transition="flip">Home</a></div>
+                    <div class="ui-block-b"><a href="portfolio.html" data-transition="flip">Portfolio</a></div>
+                    <div class="ui-block-c"><a class="navSelected" href="blog.html" data-transition="flip">Blog</a></div>
+                    <div class="ui-block-d"><a href="contact.html" data-transition="flip">Contact</a></div>
+                </nav>
+            </footer>  
+    
+            <!--  Footer     END  -->  
+
+        </div>
+        <!--     Page initialization    END  -->
+    </body>
+</html>

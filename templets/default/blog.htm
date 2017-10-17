@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>mooc.im</title>
+        <!--        META SECTION-->
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=false" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+
+
+
+        <!--        STYLES SECTION -->
+
+        <link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/css/jquery.mobile-1.0.min.css" /> 
+        <link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/css/lightGreen.css" />
+
+        <!--        FONTS SECTION 
+
+        <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+
+-->
+
+
+        <!--        SCRIPT SECTION -->
+
+        <script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/jquery.js"></script>
+        <script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/jquery.mobile-1.0.min.js"></script>
+        
+         <style>
+        .dede_pages{
+}
+.dede_pages ul{
+	float:left;
+	padding:1px 0px 12px 1px;
+}
+.dede_pages ul li{
+	float:left;
+	line-height:17px;
+	margin-right:6px;
+    list-style-type: none;
+}
+.dede_pages ul li a{
+	float:left;
+    font-family:Tahoma;
+	display:block;
+    font-size: 0.8em;
+
+
+    background: white;
+    border-bottom: 2px solid #e3e3e3;
+
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+
+    color: #d6d6d6 !important;
+
+    padding: 0.5em 1em;
+}
+.dede_pages ul li a:hover{
+	text-decoration:none;
+    background: #519548 !important;
+    color: white !important;
+    border-bottom: 2px solid #636363 !important;
+}
+.dede_pages ul li.thisclass,
+.dede_pages ul li.thisclass a,.pagebox ul li.thisclass a:hover{
+	background: #519548 !important;
+	border-bottom: 0px solid #636363 !important;
+}   
+             
+        </style> 
+
+    </head>
+    <body>
+        <!--    Page initialization      -->
+        <div data-role="page">
+
+
+
+            <!--            Header-->
+         {dede:include filename="head.htm"/}
+            <!--         Heder     END  -->
+
+
+
+
+            <!--            Main Content-->
+            <section data-role="content" class="wrappedWidth" id="blog">
+                <blockquote class="info">
+                    <p>
+                        Some important info should be placed here.
+                    </p>
+                </blockquote>
+                
+               {dede:list pagesize='6'} 
+                <article>
+                    <img class="mainIMG" src="[field:litpic/]" alt="Main Blog Image" />
+                    <h2>[field:title/]</h2>
+                    <div class="article-wrapper">
+                        <span class="date-info">[field:pubdate function="GetDateTimeMK(@me)"/] </span>
+                        <span class="comment-info">[field:scores/]  Comments</span>
+                        <p>
+                            [field:description/]...
+                        </p>
+                        <hr />
+                        <a href="[field:arcurl/]">Read more »</a>
+                    </div>
+                </article>
+                {/dede:list}
+                
+                
+<!--{dede:list pagesize='10'}
+    <li> [field:array runphp='yes']@me = (empty(@me['litpic']) ? "" : "<a href='{@me['arcurl']}' class='preview'><img src='{@me['litpic']}'/></a>"); [/field:array]
+     [<b>[field:typelink/]</b>] <a href="[field:arcurl/]" class="title">[field:title/]</a> <span class="info"> <small>日期：</small>[field:pubdate function="GetDateTimeMK(@me)"/] <small>点击：</small>[field:click/] <small>好评：</small>[field:scores/] </span>
+     <p class="intro"> [field:description/]... </p>
+    </li>
+{/dede:list}
+    -->                            
+              
+                
+                
+ <!--               <div id="pagination">
+                    <a href="#">Prev</a>
+                    <a href="#">1</a>
+                    <a href="#">2</a>
+                    <a href="#">3</a>
+                    <a href="#">Next</a>
+                </div>
+ -->               
+              
+<div class="dede_pages">
+   <ul class="pagelist">
+    {dede:pagelist listitem="info,index,end,pre,next,pageno,option" listsize="5"/}
+   </ul>
+  </div>
+  <!-- /pages -->
+                
+                
+            </section>
+            <!--  Main Content     END  -->
+
+
+
+
+
+
+            <!--         Footer   -->
+         {dede:include filename="footer.htm"/}  
+            <!--  Footer     END  -->  
+
+        </div>
+        <!--     Page initialization    END  -->
+    </body>
+</html>

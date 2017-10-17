@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Breathe</title>
+        <!--        META SECTION-->
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=false" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+
+
+
+        <!--        STYLES SECTION -->
+
+        <link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/css/jquery.mobile-1.0.min.css" /> 
+        <link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/css/lightGreen.css" />
+
+        <!--        FONTS SECTION 
+
+        <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+
+-->
+
+
+        <!--        SCRIPT SECTION -->
+
+        <script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/jquery.js"></script>
+        <script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/jquery.mobile-1.0.min.js"></script> 
+
+    </head>
+    <body>
+        <!--    Page initialization      -->
+        <div data-role="page" data-theme="a">
+
+
+
+            <!--            Header-->
+         {dede:include filename="head.htm"/}
+            <!--         Heder     END  -->
+
+
+
+
+            <!--            Main Content-->
+            <section data-role="content" class="wrappedWidth" id="blog-single">
+                <!--                Main Article-->
+                
+                <article>
+                    <img src="{dede:field.litpic/}" />
+                    <h2>{dede:field.title/}</h2>
+                    <div class="article-wrapper">
+                        <span class="date-info">{dede:field.pubdate function="MyDate('Y-m-d H:i',@me)"/}</span>
+                        <span class="comment-info">{dede:field.writer/} Comments</span>
+                        <p>
+                           {dede:field.body/}
+                        </p>
+                        <hr />
+                        <p>
+                            <strong>Tags:</strong> Blog, Breathe, City
+                        </p>
+                    </div>
+
+                </article>
+
+
+
+
+
+
+
+
+                <!--                    Comments Section-->
+                <section id="commentSection">
+                    <div>
+                        <img src="{dede:global.cfg_templets_skin/}/images/refimages/comment3.jpg" alt="Comment" />
+                        <h6>Arnold J. Rimmer</h6>
+                        <span>17 hours ago</span>
+                        <p>Duis sollicitudin sapien a diam bibendum viverra. Donec congue iaculis porttitor. Ut est odio, ornare at pretium aliquet, posuere vitae dolor. Duis arcu velit, blandit eget suscipit dapibus, condimentum vel ligula.</p>
+                    </div>
+                    <div>
+                        <img src="{dede:global.cfg_templets_skin/}/images/refimages/comment2.jpg" alt="Comment" />
+                        <h6>Dave Lister</h6>
+                        <span>21 hours ago</span>
+                        <p>Cras viverra consequat elit, et blandit nulla euismod venenatis. Fusce mattis erat tempus velit aliquam faucibus. </p>
+                    </div>
+                    <div>
+                        <img src="{dede:global.cfg_templets_skin/}/images/refimages/comment1.jpg" alt="Comment" />
+                        <h6>Kryten</h6>
+                        <span>3 days ago</span>
+                        <p>
+                            Etiam luctus egestas nibh et ornare. Phasellus erat mauris, eleifend id facilisis sed, bibendum nec metus. Aliquam dictum elementum porttitor. Integer quam nibh, tempor eu imperdiet at, faucibus feugiat nulla. Vivamus urna felis, dignissim id gravida et, ultrices eu odio. 
+                        </p>
+                        <p>
+                            Vestibulum id ligula nulla, sed sagittis erat. Fusce tempor sodales lectus eget porttitor. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. 
+                        </p>
+                    </div>
+                </section>
+
+
+
+
+
+
+
+
+
+
+                <!--                Comment Form Section-->
+                <section id="CommentForm">
+                    <h2>Leave a comment</h2>
+                    <form action="#">
+                        <input type="text" name="name" id="name" value="" placeholder="Username" />
+                        <input type="text" name="mail" id="mail" value="" placeholder="Mail" />
+                        <textarea name="text" id="text" cols="30" rows="10" placeholder="Text" ></textarea>
+                        <input type="button" value="Submit" name="submit" />
+                    </form>
+                </section>
+                <!--    Comment form section    END  -->
+
+
+            </section>
+            <!--  Main Content     END  -->
+
+
+
+
+
+
+            <!--         Footer   -->
+             {dede:include filename="footer.htm"/}    
+            <!--  Footer     END  -->  
+
+        </div>
+        <!--     Page initialization    END  -->
+    </body>
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Breathe</title>
+        <!--        META SECTION-->
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=false" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+
+
+
+        <!--        STYLES SECTION -->
+
+        <link rel="stylesheet" href="/templets/default/css/jquery.mobile-1.0.min.css" /> 
+        <link rel="stylesheet" href="/templets/default/css/lightGreen.css" />
+
+        <!--        FONTS SECTION -->
+
+        <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+
+
+
+
+        <!--        SCRIPT SECTION -->
+
+        <script type="text/javascript" src="/templets/default/js/jquery.js"></script>
+        <script type="text/javascript" src="/templets/default/js/jquery.mobile-1.0.min.js"></script> 
+
+    </head>
+    <body>
+        <!--    Page initialization      -->
+        <div data-role="page" data-theme="a">
+
+
+
+            <!--            Header-->
+            <header data-role="header">
+                <h1>www.mooc.im</h1>
+                
+                
+                <nav class="ui-grid-c">
+                    <div class="ui-block-a"><a href="/" data-transition="flip">Home</a></div>
+                    
+                    
+                   
+                     <div class="ui-block-b"><a href='/plus/list.php?tid=6'  data-transition="flip"> Works</a></div>
+                     
+                     <div class='ui-block-b'><a href='/plus/list.php?tid=1'  rel='dropmenu1'>BLOG</a></div>
+                   
+                     <div class="ui-block-b"><a href='/plus/list.php?tid=12'  data-transition="flip"> CONTACT</a></div>
+                     
+                      
+                </nav>
+                <hr class="divider" />
+            </header>
+            
+           
+                    
+            <!--         Heder     END  -->
+
+
+
+
+            <!--            Main Content-->
+            <section data-role="content" class="wrappedWidth" id="blog-single">
+                <!--                Main Article-->
+                
+                <article>
+                    <img class="mainIMG" src="[field:litpic/]" alt="Main Blog Image" />
+                    <h2>HTML教程：建立超级连接</h2>
+                    <div class="article-wrapper">
+                        <span class="date-info">2010-04-07 09:29</span>
+                        <span class="comment-info"> Comments</span>
+                        <p>
+                           <strong>tabbing浏览<br /><br /></strong>不或不能使用指点设备的用户可以用快捷键tab键来打开连接，并且本身也要有逻辑tab顺序。尽管HTML是线性的，tabindex属性允许你定义它快捷键们的顺序，而且这些逻辑tab应该可以自动落入自己位置。<br /><br /><strong>快捷键</strong><br /><br />快捷键可以通过键盘的特定按键进行更方便的导航（当按住Alt键或者Ctrl键时获得焦点）。对于那些没有指点设备的用户，比起使用tab键操作连接更快捷，更方便。<br /><br />没有必要为每一个连接都设置快捷键，但为主要导航连接都设置是一个不错的主意。<br /><br /><p class="code"><a href="somepage.html" accesskey="s">Some page</a></p> <br /><strong>注意</strong><br /><br /><p class="code">快捷键的麻烦是，用户常常没有办法知道它们在哪里和到底是什么键（除非查看源代码）。虽然JAWS──一个可以大声读出快捷键的屏幕阅读器，但要掘尽其能，你还是得让快捷键更直白。<br />你可以使用像“跳过导航”的连接技术（下详），或者选择一个独立的页面来说明你网站的这些易用性相关功能，包括快捷键。一个越来越流行的办法是在一个与快捷键相一致的字母上加下划线，类似于Windows程序菜单中的方法。</p><br /><strong>连接的标题</strong><br /><br />为连接添加标题属性title是一个好主意，这会给用户所指向连接的予说明，所以能改进导航。<br /><br />假如这个连接是执行Javascript的，这也有利于为没有使用Javascript功能的用户解释什么将会（或不会）发生。<br /><br /><p class="code"><a href="#" onclick="opennastypopup()" onkeypress="opennastypopup()"<br />title="Open a nasty Javascript pop-up window">Monster</a></p><br /><strong>弹出窗口</strong><br /><br />说到Javascript弹出窗口，你要坚持使用的话，或者很多人（你的用户）告诉你要使用，你可以用onkeypress和onclick来使得页面更易用。并且，在功能上定义了返回false的弹出窗口，包含一个带有href属性指向普通页面的连接，对于一个没有使用Javascript功能的用户来说，可以以普通方式载入这个页面。<br /><br />比如：<br /><br /><p class="code"><script type="text/javascript"><br />function opennastypopup()<br />{ <br />window.open("monster.html", "", "toolbar=no,height=100,width=200"); <br />return false; <br />} <br /></script><br /> ... <br /><a href="monster.html" onclick="return opennastypopup()" onkeypress="return opennastypopup()">Monster</a></p> <br /><strong>相邻的连接</strong><br /><br />相邻的连接应该至少用空格隔开，以便为屏幕阅读器清晰辩明。<br />这也可以用字符来完成，连接之间的（比如竖线 |── 连接 | 连接），或者包围连接的（如中括号 [] ── [连接] [连接]）。把连接放在列表里面也是一个好主意。然后可以用CSS来样式化显示，甚至可以是并行的列表（用 display: in-line）。<br /><br /><strong>跳过导航</strong><br /><br />你应该让使用屏幕阅读器的用户一个跳过导航直接到内容的机会。这是因为，假设你的连接是固定的（应该是），用户不必经受每一页同样的信息，尤其是大量的。你可以设置一个连接，跳过导航直接跳到内容的连接。<br /><br />看起来像是这样的：<br /><br /><p class="code"><p id="header"><br /> <h1>The Heading</h1><br /> <a href="#content" accesskey="n">Skip navigation</a><br /></p><br /><p id="navigation"><br /><!--loads of navigation stuff --><br /></p><br /><p id="content"><br /><!--lovely content --><br /></p></p> <br />显然，你没有必要在可视化浏览器中显示它，所有你可以用CSS开隐藏它。<br /><br />注意<br /><br /><p class="code">这是虽然只是一个CSS的小技巧，但是“跳过导航”的特效药。这涉及到隐藏连接的方法。<br />最常见的办法可能是使用display: none，但有些浏览器看到但不理解这个连接，“跳过导航”的连接必须显示。<br />然而没有必要显示──没有理由显示给醒目的用户。所以坚持使用包含display: none的样式，还不如把元素宽和高设置为零（width: 0; height: 0; overflow: hidden;），这有相同的视觉效果，但可以使屏幕阅读器理解。</p>
+            <p align="center"> </p>
+                        </p>
+                        <hr />
+                        <p>
+                            <strong>Tags:</strong> Blog, Breathe, City
+                        </p>
+                    </div>
+
+                </article>
+
+
+
+
+
+
+
+
+                <!--                    Comments Section-->
+                <section id="commentSection">
+                    <div>
+                        <img src="images/refimages/comment3.jpg" alt="Comment" />
+                        <h6>Arnold J. Rimmer</h6>
+                        <span>17 hours ago</span>
+                        <p>Duis sollicitudin sapien a diam bibendum viverra. Donec congue iaculis porttitor. Ut est odio, ornare at pretium aliquet, posuere vitae dolor. Duis arcu velit, blandit eget suscipit dapibus, condimentum vel ligula.</p>
+                    </div>
+                    <div>
+                        <img src="images/refimages/comment2.jpg" alt="Comment" />
+                        <h6>Dave Lister</h6>
+                        <span>21 hours ago</span>
+                        <p>Cras viverra consequat elit, et blandit nulla euismod venenatis. Fusce mattis erat tempus velit aliquam faucibus. </p>
+                    </div>
+                    <div>
+                        <img src="images/refimages/comment1.jpg" alt="Comment" />
+                        <h6>Kryten</h6>
+                        <span>3 days ago</span>
+                        <p>
+                            Etiam luctus egestas nibh et ornare. Phasellus erat mauris, eleifend id facilisis sed, bibendum nec metus. Aliquam dictum elementum porttitor. Integer quam nibh, tempor eu imperdiet at, faucibus feugiat nulla. Vivamus urna felis, dignissim id gravida et, ultrices eu odio. 
+                        </p>
+                        <p>
+                            Vestibulum id ligula nulla, sed sagittis erat. Fusce tempor sodales lectus eget porttitor. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. 
+                        </p>
+                    </div>
+                </section>
+
+
+
+
+
+
+
+
+
+
+                <!--                Comment Form Section-->
+                <section id="CommentForm">
+                    <h2>Leave a comment</h2>
+                    <form action="#">
+                        <input type="text" name="name" id="name" value="" placeholder="Username" />
+                        <input type="text" name="mail" id="mail" value="" placeholder="Mail" />
+                        <textarea name="text" id="text" cols="30" rows="10" placeholder="Text" ></textarea>
+                        <input type="button" value="Submit" name="submit" />
+                    </form>
+                </section>
+                <!--    Comment form section    END  -->
+
+
+            </section>
+            <!--  Main Content     END  -->
+
+
+
+
+
+
+            <!--         Footer   -->
+             
+<!-- //底部模板 -->
+
+  <footer data-role="footer" data-theme="a" data-position="inline">
+                <hr class="divider" />
+                <h4>Follow me on</h4>
+                <div class="ui-grid-c wrappedWidth shareIcons">
+                    <div class="ui-block-a"><a href="#"><img src="/templets/default/images/lightGreen/fb.png" alt="Facebook" /></a></div>
+                    <div class="ui-block-b"><a href="#"><img src="/templets/default/images/lightGreen/digg.png" alt="Digg" /></a></div>
+                    <div class="ui-block-c"><a href="#"><img src="/templets/default/images/lightGreen/twitter.png" alt="Twitter" /></a></div>
+                    <div class="ui-block-d"><a href="#"><img src="/templets/default/images/lightGreen/rss.png" alt="RSS" /></a></div>
+                </div>
+
+                <h4>Text Widget</h4>
+                <p>Dit augue est, elementum id commodo sit amet, pellentesque vel mi.
+                    Nulla eu ante id ligula posuere pellentesque. Vivamus rhoncus mattis tellus
+                    vitae pretium. Vestibulum ullamcorper congue nisl eget suscipit. Aenean feugiat odio 
+                    a velit scelerisque consequat. Fusce congue ipsum quis felis condimentum auctor tincidunt 
+                    erat scelerisque. Vestibulum ante ipsum <a href="#">primis in faucibus</a> orci luctus et ultrices posuere 
+                    cubilia Curae; Nullam purus eros, consequat in blandit non, adipiscing ut ipsum. In eu diam 
+                    lorem. 
+                </p>
+
+                <nav class="ui-grid-c">
+                    <div class="ui-block-a"><a href="index.html" data-transition="flip">Home</a></div>
+                    <div class="ui-block-b"><a href="portfolio.html" data-transition="flip">Portfolio</a></div>
+                    <div class="ui-block-c"><a class="navSelected" href="blog.html" data-transition="flip">Blog</a></div>
+                    <div class="ui-block-d"><a href="contact.html" data-transition="flip">Contact</a></div>
+                </nav>
+            </footer>  
+    
+            <!--  Footer     END  -->  
+
+        </div>
+        <!--     Page initialization    END  -->
+    </body>
+</html>

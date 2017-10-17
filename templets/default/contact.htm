@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Breathe</title>
+        <!--        META SECTION-->
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=false" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+
+
+
+        <!--        STYLES SECTION -->
+
+        <link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/css/jquery.mobile-1.0.min.css" /> 
+        <link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/css/lightGreen.css" />
+
+        <!--        FONTS SECTION 
+
+        <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+-->
+
+
+
+        <!--        SCRIPT SECTION -->
+
+        <script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/jquery.js"></script>
+        <script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/jquery.mobile-1.0.min.js"></script> 
+
+    </head>
+    <body>
+        <!--    Page initialization      -->
+        <div data-role="page">
+
+
+
+            <!--            Header-->
+                    {dede:include filename="head.htm"/}
+            <!--         Heder     END  -->
+
+
+
+
+            <!--            Main Content-->
+            <section data-role="content" class="wrappedWidth">
+                <section id="contact">
+                    <img class="mainIMG" src="{dede:global.cfg_templets_skin/}/images/refimages/map.jpg" alt="Map" />
+                    <h2>Contact</h2>
+                    <div class="article-wrapper">
+                        <p>Nam vestibulum, orci sit amet pellentesque molestie, tellus augue varius erat, a euismod augue arcu eu dui. Duis sollicitudin sapien a diam bibendum viverra. Donec congue iaculis porttitor. </p>                    
+                        <span class="name-contact">Jimmy Car</span>
+                        <span class="number-contact">+420 223 568 769</span>
+                        <span class="mail-contact">yourmail@mail.com</span>
+                    </div>
+                </section>
+
+                <section id="CommentForm">
+                    <h2>Send us an email</h2>
+                    <form action="processForm.php" method="post">
+                        <input type="text" name="senderName" id="name" value="" placeholder="Username" />
+                        <input type="text" name="senderEmail" id="mail" value="" placeholder="Mail" />
+                        <textarea name="message" id="text" cols="30" rows="10" placeholder="Text" ></textarea>
+                        <input data-theme="a" type="submit" value="Submit" name="submit" />
+                    </form>
+                </section>
+            </section>
+            <!--  Main Content     END  -->
+
+
+
+
+
+
+            <!--         Footer   -->
+                   {dede:include filename="head.htm"/}
+            <!--  Footer     END  -->  
+
+        </div>
+        <!--     Page initialization    END  -->
+    </body>
+</html>

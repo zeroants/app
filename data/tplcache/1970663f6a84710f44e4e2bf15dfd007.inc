@@ -1,0 +1,1 @@
+<a href='{dede:field name="typeurl"/}'  rel='dropmenu7'>{dede:field name="typename"/}</a>

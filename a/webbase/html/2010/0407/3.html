@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Breathe</title>
+        <!--        META SECTION-->
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=false" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+
+
+
+        <!--        STYLES SECTION -->
+
+        <link rel="stylesheet" href="/templets/default/css/jquery.mobile-1.0.min.css" /> 
+        <link rel="stylesheet" href="/templets/default/css/lightGreen.css" />
+
+        <!--        FONTS SECTION -->
+
+        <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+
+
+
+
+        <!--        SCRIPT SECTION -->
+
+        <script type="text/javascript" src="/templets/default/js/jquery.js"></script>
+        <script type="text/javascript" src="/templets/default/js/jquery.mobile-1.0.min.js"></script> 
+
+    </head>
+    <body>
+        <!--    Page initialization      -->
+        <div data-role="page" data-theme="a">
+
+
+
+            <!--            Header-->
+            <header data-role="header">
+                <h1>www.mooc.im</h1>
+                
+                
+                <nav class="ui-grid-c">
+                    <div class="ui-block-a"><a href="/" data-transition="flip">Home</a></div>
+                    
+                    
+                   
+                     <div class="ui-block-b"><a href='/plus/list.php?tid=6'  data-transition="flip"> Works</a></div>
+                     
+                     <div class='ui-block-b'><a href='/plus/list.php?tid=1'  rel='dropmenu1'>BLOG</a></div>
+                   
+                     <div class="ui-block-b"><a href='/plus/list.php?tid=12'  data-transition="flip"> CONTACT</a></div>
+                     
+                      
+                </nav>
+                <hr class="divider" />
+            </header>
+            
+           
+                    
+            <!--         Heder     END  -->
+
+
+
+
+            <!--            Main Content-->
+            <section data-role="content" class="wrappedWidth" id="blog-single">
+                <!--                Main Article-->
+                
+                <article>
+                    <img class="mainIMG" src="[field:litpic/]" alt="Main Blog Image" />
+                    <h2>网页中应用表格爱好者</h2>
+                    <div class="article-wrapper">
+                        <span class="date-info">2010-04-07 09:29</span>
+                        <span class="comment-info"> Comments</span>
+                        <p>
+                           <p>你认为已经知道怎么制做表格了吧。当然，你已经了解 table、tr、td和th标签了，甚至还在你的口袋里装入了rowspan和colspan。你确实可以制做一个精美小巧的咖啡色三合板桌子（表格），但难道你不想做一个优雅稳固，上面有玻璃的，足以承受一头大笨象的宴会桌（表格）？</p><p><strong>列反罢工</strong></p><p>表格行简直使表格列看起来很愚蠢。同样的工作，表格由行与行构建，让列感到十分沮丧。</p><p>但是很幸运，colgroup和col标签来拯救热心的列了。</p><p>这两个标签允许你定义表格列和尽你所需地样式化它们，对于你需要把列排成行或不同着色特别有用，如果没有它们，你需要样式化每一个单独的单元格。</p><p>这是一个使用这些标签的例子：</p><p class="code"><table><br /><colgroup> <col /> <col class="alternate" /> <col /> </colgroup><br /><tr><br /><td>This</td><br /><td>That</td><br /><td>The other</td><br /></tr><br /><tr><br /><td>Ladybird</td><br /><td>Locust</td><br /><td>Lunch</td><br /></tr><br /></table> </p><p>alternate类的样式将被应用到第二列，或者说每一行的第二个单元格。</p><p>你当然可以在colgroup或者col上使用span属性，跟rowspan和colspan有相似的用途</p><p>colgroup一起使用可以定义属于列组的行数，比如<colgroup span="2"></colgroup>会组合头两列。当在colgroup使用span时，不应该再使用col标签。</p><p>在col里使用span是更明智的，可以，比如，应用在上述例子像这样：</p><p class="code"><table><br /><colgroup> <col /> <col span="2" class="alternate" /> </colgroup><br />&nbsp;... </p><p>这将把alternate类应用到最后两列。</p><p><strong>注意</strong></p><p>哦，但是可能有一个陷井，不是吗？那就是：你仅能样式化列的是边框、背景、宽度和可见性。</p><p>Internet Explorer在这方面看起来比其他浏览器表现更好因为它装载有漂亮的CSS属性比如 color，但是，正如结果一样，这是因为它疯狂古怪的行为而已。这种奇特的异常可以让Ian Hixie来解释。</p><p><strong>摘要和说明插曲</strong></p><p>一个简要和容易的提高易用性的思考是，总是为表格应用摘要和说明。</p><p>摘要可以在表格起始标签table中用summary属性应用到表格中。这不会显示，但可以辅助非可视化的表格表现。</p><p>caption标签在起始标签table后直接定义说明。它默认直接在表格顶端出现，但可以在CSS属性caption-side中设置top、right、bottom或者left值，尽管IE不会在意。</p><p class="code"><table summary="The mating habits of locust, showing how many use protection and how many have a cigarette afterwards"><br /><caption>Locust mating habits</caption><br />... </p><p><strong>表头、表注和滚动表格的探讨</strong></p><p>thead、tfoot和tbody允许你把表格分为表头、表注和表格主体。对于大表格尤其有用，在打印的时候，表头和表注应该会在每一页都出现。</p><p>这些元素必须按thead-tfoot-tbody的顺序定义，像这样：</p><p class="code"><table><br /><thead><br /><tr><br /><td>Header 1</td><br /><td>Header 2</td><br /><td>Header 3</td><br /></tr><br /></thead><br /><tfoot><br /><tr><br /><td>Footer 1</td><br /><td>Footer 2</td><br /><td>Footer 3</td><br /></tr><br /></tfoot><br /><tbody><br /><tr><br /><td>Cell 1</td><br /><td>Cell 2</td><br /><td>Cell 3</td><br /></tr><br />&nbsp;... <br /></tbody><br /></table> </p><p>你可以让表格主体tbody在基于Gecko的浏览器（Mozilla、Firefox和Netscape 6+等）滚动，通过应用overflow: auto; max-height: [whatever] 的样式。然后你可以看见表头和表注固定，而表的主体右边有滚动条。你应该谨慎使用max-height属性因为IE不认识，比较安全的做法是使用 height属性，IE将为它应用到每一行。</p><p>注意：说回浏览器的差异，目前IE遇到表头和表注时还是没有什么线索，尽管还是当作表格来处理，但打印的时候不会在哦每一页都出现表头和表注，只孤零零地传递滚动的表格。</p><p><strong>注意</strong></p><p>谨慎对待滚动表格。尽管它们提供十分有用的目的，大部分用户不习惯它们并且认为线性数据是唯一的。</p>
+            <p align="center"> </p>
+                        </p>
+                        <hr />
+                        <p>
+                            <strong>Tags:</strong> Blog, Breathe, City
+                        </p>
+                    </div>
+
+                </article>
+
+
+
+
+
+
+
+
+                <!--                    Comments Section-->
+                <section id="commentSection">
+                    <div>
+                        <img src="images/refimages/comment3.jpg" alt="Comment" />
+                        <h6>Arnold J. Rimmer</h6>
+                        <span>17 hours ago</span>
+                        <p>Duis sollicitudin sapien a diam bibendum viverra. Donec congue iaculis porttitor. Ut est odio, ornare at pretium aliquet, posuere vitae dolor. Duis arcu velit, blandit eget suscipit dapibus, condimentum vel ligula.</p>
+                    </div>
+                    <div>
+                        <img src="images/refimages/comment2.jpg" alt="Comment" />
+                        <h6>Dave Lister</h6>
+                        <span>21 hours ago</span>
+                        <p>Cras viverra consequat elit, et blandit nulla euismod venenatis. Fusce mattis erat tempus velit aliquam faucibus. </p>
+                    </div>
+                    <div>
+                        <img src="images/refimages/comment1.jpg" alt="Comment" />
+                        <h6>Kryten</h6>
+                        <span>3 days ago</span>
+                        <p>
+                            Etiam luctus egestas nibh et ornare. Phasellus erat mauris, eleifend id facilisis sed, bibendum nec metus. Aliquam dictum elementum porttitor. Integer quam nibh, tempor eu imperdiet at, faucibus feugiat nulla. Vivamus urna felis, dignissim id gravida et, ultrices eu odio. 
+                        </p>
+                        <p>
+                            Vestibulum id ligula nulla, sed sagittis erat. Fusce tempor sodales lectus eget porttitor. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. 
+                        </p>
+                    </div>
+                </section>
+
+
+
+
+
+
+
+
+
+
+                <!--                Comment Form Section-->
+                <section id="CommentForm">
+                    <h2>Leave a comment</h2>
+                    <form action="#">
+                        <input type="text" name="name" id="name" value="" placeholder="Username" />
+                        <input type="text" name="mail" id="mail" value="" placeholder="Mail" />
+                        <textarea name="text" id="text" cols="30" rows="10" placeholder="Text" ></textarea>
+                        <input type="button" value="Submit" name="submit" />
+                    </form>
+                </section>
+                <!--    Comment form section    END  -->
+
+
+            </section>
+            <!--  Main Content     END  -->
+
+
+
+
+
+
+            <!--         Footer   -->
+             
+<!-- //底部模板 -->
+
+  <footer data-role="footer" data-theme="a" data-position="inline">
+                <hr class="divider" />
+                <h4>Follow me on</h4>
+                <div class="ui-grid-c wrappedWidth shareIcons">
+                    <div class="ui-block-a"><a href="#"><img src="/templets/default/images/lightGreen/fb.png" alt="Facebook" /></a></div>
+                    <div class="ui-block-b"><a href="#"><img src="/templets/default/images/lightGreen/digg.png" alt="Digg" /></a></div>
+                    <div class="ui-block-c"><a href="#"><img src="/templets/default/images/lightGreen/twitter.png" alt="Twitter" /></a></div>
+                    <div class="ui-block-d"><a href="#"><img src="/templets/default/images/lightGreen/rss.png" alt="RSS" /></a></div>
+                </div>
+
+                <h4>Text Widget</h4>
+                <p>Dit augue est, elementum id commodo sit amet, pellentesque vel mi.
+                    Nulla eu ante id ligula posuere pellentesque. Vivamus rhoncus mattis tellus
+                    vitae pretium. Vestibulum ullamcorper congue nisl eget suscipit. Aenean feugiat odio 
+                    a velit scelerisque consequat. Fusce congue ipsum quis felis condimentum auctor tincidunt 
+                    erat scelerisque. Vestibulum ante ipsum <a href="#">primis in faucibus</a> orci luctus et ultrices posuere 
+                    cubilia Curae; Nullam purus eros, consequat in blandit non, adipiscing ut ipsum. In eu diam 
+                    lorem. 
+                </p>
+
+                <nav class="ui-grid-c">
+                    <div class="ui-block-a"><a href="index.html" data-transition="flip">Home</a></div>
+                    <div class="ui-block-b"><a href="portfolio.html" data-transition="flip">Portfolio</a></div>
+                    <div class="ui-block-c"><a class="navSelected" href="blog.html" data-transition="flip">Blog</a></div>
+                    <div class="ui-block-d"><a href="contact.html" data-transition="flip">Contact</a></div>
+                </nav>
+            </footer>  
+    
+            <!--  Footer     END  -->  
+
+        </div>
+        <!--     Page initialization    END  -->
+    </body>
+</html>

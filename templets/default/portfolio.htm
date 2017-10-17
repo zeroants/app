@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Breathe</title>
+        <!--        META SECTION-->
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=false" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+
+
+
+        <!--        STYLES SECTION -->
+
+            <link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/css/jquery.mobile-1.0.min.css" /> 
+            <link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/css/lightGreen.css" />
+
+        <!--        FONTS SECTION
+
+        <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+ -->
+
+
+
+        <!--        SCRIPT SECTION -->
+
+        <script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/jquery.js"></script>
+        <script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/jquery.mobile-1.0.min.js"></script> 
+    <style>
+        .dede_pages{
+}
+.dede_pages ul{
+	float:left;
+	padding:1px 0px 12px 1px;
+}
+.dede_pages ul li{
+	float:left;
+	line-height:17px;
+	margin-right:6px;
+    list-style-type: none;
+}
+.dede_pages ul li a{
+	float:left;
+    font-family:Tahoma;
+	display:block;
+    font-size: 0.8em;
+
+
+    background: white;
+    border-bottom: 2px solid #e3e3e3;
+
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+
+    color: #d6d6d6 !important;
+
+    padding: 0.5em 1em;
+}
+.dede_pages ul li a:hover{
+	text-decoration:none;
+    background: #519548 !important;
+    color: white !important;
+    border-bottom: 2px solid #636363 !important;
+}
+.dede_pages ul li.thisclass,
+.dede_pages ul li.thisclass a,.pagebox ul li.thisclass a:hover{
+	background: #519548 !important;
+	border-bottom: 0px solid #636363 !important;
+}   
+             
+        </style> 
+    </head>
+    <body>
+        <!--    Page initialization      -->
+        <div data-role="page">
+
+
+
+            <!--            Header-->
+            {dede:include filename="head.htm"/}
+            <!--         Heder     END  -->
+
+
+
+
+            <!--            Main Content-->
+            <section data-role="content" id="portfolio" class="wrappedWidth">
+                {dede:list pagesize='4'}    
+               <article>
+                    <a href="[field:arcurl/]">
+                        <img class="mainIMG" src="[field:litpic/]" alt="[field:title function='html2text(@me)'/]" />
+                        <h2>[field:title/]</h2>
+                        <span>[field:pubdate function="GetDateMK(@me)"/]</span>
+                    </a>
+                </article>
+                  {/dede:list} 
+                    
+              
+
+
+   <div class="dede_pages">
+   <ul class="pagelist">
+    {dede:pagelist listitem="info,index,end,pre,next,pageno,option" listsize="5"/}
+   </ul>
+  </div>
+            <!--  Main Content     END  -->
+            </section>
+
+       
+            <!--         Footer   -->
+           {dede:include filename="footer.htm"/}
+            <!--  Footer     END  -->  
+        <!--     Page initialization    END  -->
+    </body>
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Breathe</title>
+        <!--        META SECTION-->
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=false" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+
+
+
+        <!--        STYLES SECTION -->
+
+        <link rel="stylesheet" href="/templets/default/css/jquery.mobile-1.0.min.css" /> 
+        <link rel="stylesheet" href="/templets/default/css/lightGreen.css" />
+
+        <!--        FONTS SECTION -->
+
+        <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+
+
+
+
+        <!--        SCRIPT SECTION -->
+
+        <script type="text/javascript" src="/templets/default/js/jquery.js"></script>
+        <script type="text/javascript" src="/templets/default/js/jquery.mobile-1.0.min.js"></script> 
+
+    </head>
+    <body>
+        <!--    Page initialization      -->
+        <div data-role="page" data-theme="a">
+
+
+
+            <!--            Header-->
+            <header data-role="header">
+                <h1>www.mooc.im</h1>
+                
+                
+                <nav class="ui-grid-c">
+                    <div class="ui-block-a"><a href="/" data-transition="flip">Home</a></div>
+                    
+                    
+                   
+                     <div class="ui-block-b"><a href='/plus/list.php?tid=6'  data-transition="flip"> Works</a></div>
+                     
+                     <div class='ui-block-b'><a href='/plus/list.php?tid=1'  rel='dropmenu1'>BLOG</a></div>
+                   
+                     <div class="ui-block-b"><a href='/plus/list.php?tid=12'  data-transition="flip"> CONTACT</a></div>
+                     
+                      
+                </nav>
+                <hr class="divider" />
+            </header>
+            
+           
+                    
+            <!--         Heder     END  -->
+
+
+
+
+            <!--            Main Content-->
+            <section data-role="content" class="wrappedWidth" id="blog-single">
+                <!--                Main Article-->
+                
+                <article>
+                    <img class="mainIMG" src="[field:litpic/]" alt="Main Blog Image" />
+                    <h2>新手学习老知识（二）HTML用好活动字幕标记marquee</h2>
+                    <div class="article-wrapper">
+                        <span class="date-info">2010-04-07 09:29</span>
+                        <span class="comment-info"> Comments</span>
+                        <p>
+                           <p>　活动字幕，也称为滚动看板、滚动字幕。活动字幕的使用使得整个网页更有动感，显得很有生气。现在的网站中也越来越多地使用活动字幕来加强网页的互动性。用Javascript编程可以实现活动字幕效果；用Dreamweaver的图层再用其时间线功能可以做出非常漂亮的滚动看板。而用HTML的<marquee>活动字幕标记所需的代码最少，确实能够以较少的下载时间换来较好的效果。该标记语法格式如下：</p><p><marquee<br />aligh=left|center|right|top|bottom<br />bgcolor=#n<br />direction=left|right|up|down<br />behavior=type<br />height＝n<br />hspace＝n<br />scrollamount=n<br />Scrolldelay=n<br />width=n<br />VSpace=n<br />loop＝n></p><p>　　可以看出由于活动字幕的显示方式多种多样，可选的参数也很多。下面解释一下各参数的含义：<span class="web"></span></p><p>　　align：是设定活动字幕的位置，不过除了居左、居中、居右三种位置外，又增加靠上（align=top）和靠下（align=bottom）两种位置。</p><p>　　Bgcolor：用于设定活动字幕的背景颜色，一般是十六进制数。</p><p>　　Direction：用于设定活动字幕的滚动方向是向左、向右、向上、向下。</p><p>　　Behavior：用于设定滚动的方式，主要由三种方式：behavior="scroll"表示由一端滚动到另一端；behavior="slide":表示由一端快速滑动到另一端，且不再重复； behavior="alternate"表示在两端之间来回滚动。</p><p>　　Height：用于设定滚动字幕的高度。</p><p>　　Width：则设定滚动字幕的宽度。<span class="web"></span></p><p>　　Hspace和vspace：分别用于设定滚动字幕的左右边框和上下边框的宽度。<span class="web"></span></p><p>　　Scrollamount：用于设定活动字幕的滚动距离。</p><p>　　scrolldelay：用于设定滚动两次之间的延迟时间。</p><p>　　Loop：用于设定滚动的次数，当loop=-1表示一直滚动下去，直到页面更新。</p><p>　　<marquee>标记的默认情况是向左滚动无限次，字幕高度是文本高度，滚动范围：水平滚动的宽度是当前位置的宽度；垂直滚动的高度是当前位置的高度。</p><p>　　应用技巧</p><p>　　1、全取默认值，所用代码最少，请看下面的例子</p><p>　　这个滚动字幕全取默认值，源代码：<marquee>这里写字幕内容</marquee>，代码是不是很少？</p><p>　　2、垂直滚动</p><p>　　只要加上diriction="up"就行了，如<marquee direction="up" >这里写字幕内容</marquee>。</p><p>　　3、多行文本的活动字幕</p><p>　　由于<mqrquee>标记只能作用于一段文本，因此多行活动字幕，分行时只能用<br>标记，不能用<p>标记。</p><p>　　示例源代码：</p><p><marquee><br />活动字幕内容第一行<br><br />活动字幕内容第二行<br><br />活动字幕内容第三行<br><br /></marquee><span class="web"></span></p><p>　　4、在字幕内容中加入图象<span class="web"></span></p><p>　　<marquee>虽是一个活动字幕标记，但它允许在其中加入图象。下面是一个加入了图片的代码： <marquee><img src="image/a2ball.gif" width="17" height="16">这是加入图象的活动字幕</marquee></p><p>　　5、在Dreamweaver中使用<marquee>标记</p><p>　　Dreamweaver不能在编辑窗中直接加入marquee标记，但可在源代码检视器中加入<marquee>标记，然后在编辑窗中编辑活动字幕的内容即可。<span class="web"></span></p><p>　　<marquee>标记的参数较多，在应用中要把握一个原则，能用默认值就不要再设置参数值，用什么参数就设置该参数的值，其它参数就不要再设置，以把代码控制在最少的范围内。</p><p>(负责编辑：blank)</p>
+            <p align="center"> </p>
+                        </p>
+                        <hr />
+                        <p>
+                            <strong>Tags:</strong> Blog, Breathe, City
+                        </p>
+                    </div>
+
+                </article>
+
+
+
+
+
+
+
+
+                <!--                    Comments Section-->
+                <section id="commentSection">
+                    <div>
+                        <img src="images/refimages/comment3.jpg" alt="Comment" />
+                        <h6>Arnold J. Rimmer</h6>
+                        <span>17 hours ago</span>
+                        <p>Duis sollicitudin sapien a diam bibendum viverra. Donec congue iaculis porttitor. Ut est odio, ornare at pretium aliquet, posuere vitae dolor. Duis arcu velit, blandit eget suscipit dapibus, condimentum vel ligula.</p>
+                    </div>
+                    <div>
+                        <img src="images/refimages/comment2.jpg" alt="Comment" />
+                        <h6>Dave Lister</h6>
+                        <span>21 hours ago</span>
+                        <p>Cras viverra consequat elit, et blandit nulla euismod venenatis. Fusce mattis erat tempus velit aliquam faucibus. </p>
+                    </div>
+                    <div>
+                        <img src="images/refimages/comment1.jpg" alt="Comment" />
+                        <h6>Kryten</h6>
+                        <span>3 days ago</span>
+                        <p>
+                            Etiam luctus egestas nibh et ornare. Phasellus erat mauris, eleifend id facilisis sed, bibendum nec metus. Aliquam dictum elementum porttitor. Integer quam nibh, tempor eu imperdiet at, faucibus feugiat nulla. Vivamus urna felis, dignissim id gravida et, ultrices eu odio. 
+                        </p>
+                        <p>
+                            Vestibulum id ligula nulla, sed sagittis erat. Fusce tempor sodales lectus eget porttitor. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. 
+                        </p>
+                    </div>
+                </section>
+
+
+
+
+
+
+
+
+
+
+                <!--                Comment Form Section-->
+                <section id="CommentForm">
+                    <h2>Leave a comment</h2>
+                    <form action="#">
+                        <input type="text" name="name" id="name" value="" placeholder="Username" />
+                        <input type="text" name="mail" id="mail" value="" placeholder="Mail" />
+                        <textarea name="text" id="text" cols="30" rows="10" placeholder="Text" ></textarea>
+                        <input type="button" value="Submit" name="submit" />
+                    </form>
+                </section>
+                <!--    Comment form section    END  -->
+
+
+            </section>
+            <!--  Main Content     END  -->
+
+
+
+
+
+
+            <!--         Footer   -->
+             
+<!-- //底部模板 -->
+
+  <footer data-role="footer" data-theme="a" data-position="inline">
+                <hr class="divider" />
+                <h4>Follow me on</h4>
+                <div class="ui-grid-c wrappedWidth shareIcons">
+                    <div class="ui-block-a"><a href="#"><img src="/templets/default/images/lightGreen/fb.png" alt="Facebook" /></a></div>
+                    <div class="ui-block-b"><a href="#"><img src="/templets/default/images/lightGreen/digg.png" alt="Digg" /></a></div>
+                    <div class="ui-block-c"><a href="#"><img src="/templets/default/images/lightGreen/twitter.png" alt="Twitter" /></a></div>
+                    <div class="ui-block-d"><a href="#"><img src="/templets/default/images/lightGreen/rss.png" alt="RSS" /></a></div>
+                </div>
+
+                <h4>Text Widget</h4>
+                <p>Dit augue est, elementum id commodo sit amet, pellentesque vel mi.
+                    Nulla eu ante id ligula posuere pellentesque. Vivamus rhoncus mattis tellus
+                    vitae pretium. Vestibulum ullamcorper congue nisl eget suscipit. Aenean feugiat odio 
+                    a velit scelerisque consequat. Fusce congue ipsum quis felis condimentum auctor tincidunt 
+                    erat scelerisque. Vestibulum ante ipsum <a href="#">primis in faucibus</a> orci luctus et ultrices posuere 
+                    cubilia Curae; Nullam purus eros, consequat in blandit non, adipiscing ut ipsum. In eu diam 
+                    lorem. 
+                </p>
+
+                <nav class="ui-grid-c">
+                    <div class="ui-block-a"><a href="index.html" data-transition="flip">Home</a></div>
+                    <div class="ui-block-b"><a href="portfolio.html" data-transition="flip">Portfolio</a></div>
+                    <div class="ui-block-c"><a class="navSelected" href="blog.html" data-transition="flip">Blog</a></div>
+                    <div class="ui-block-d"><a href="contact.html" data-transition="flip">Contact</a></div>
+                </nav>
+            </footer>  
+    
+            <!--  Footer     END  -->  
+
+        </div>
+        <!--     Page initialization    END  -->
+    </body>
+</html>

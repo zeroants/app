@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Breathe</title>
+        <!--        META SECTION-->
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=false" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+
+
+
+        <!--        STYLES SECTION -->
+
+        <link rel="stylesheet" href="/templets/default/css/jquery.mobile-1.0.min.css" /> 
+        <link rel="stylesheet" href="/templets/default/css/lightGreen.css" />
+
+        <!--        FONTS SECTION -->
+
+        <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+
+
+
+
+        <!--        SCRIPT SECTION -->
+
+        <script type="text/javascript" src="/templets/default/js/jquery.js"></script>
+        <script type="text/javascript" src="/templets/default/js/jquery.mobile-1.0.min.js"></script> 
+
+    </head>
+    <body>
+        <!--    Page initialization      -->
+        <div data-role="page" data-theme="a">
+
+
+
+            <!--            Header-->
+            <header data-role="header">
+                <h1>Breathe</h1>
+                <nav class="ui-grid-c">
+                    <div class="ui-block-a"><a href="index.html" data-transition="flip">Home</a></div>
+                    <div class="ui-block-b"><a href="portfolio.html" data-transition="flip">Portfolio</a></div>
+                    <div class="ui-block-c"><a class="navSelected" href="blog.html" data-transition="flip">Blog</a></div>
+                    <div class="ui-block-d"><a href="contact.html" data-transition="flip">Contact</a></div>
+                </nav>
+                <hr class="divider" />
+            </header>
+            <!--         Heder     END  -->
+
+
+
+
+            <!--            Main Content-->
+            <section data-role="content" class="wrappedWidth" id="blog-single">
+                <!--                Main Article-->
+                <article>
+                    <img class="mainIMG" src="/templets/default/images/refimages/04_thumb.jpg" alt="Main Blog Image" />
+                    <h2>学习HTML 4.0事件属性</h2>
+                    <div class="article-wrapper">
+                        <span class="date-info">2017-09-30 20:36</span>
+                        <span class="comment-info">3 Comments</span>
+                        <p>
+                         <p>
+	HTML 4.0的新特性之一是使HTML事件触发浏览器中的行为，比方说当用户点击一个HTML元素时启动一段JavaScript。以下就是可被插入HTML标签以定义事件行为的一系列属性。</p>
+<p>
+	假如你希望学习如何使用这些事件进行编程，那么你应该学习我们的JavaScript教程和DHTML教程。</p>
+<h3>
+	窗口事件 (Window Events)</h3>
+<p>
+	仅在body和frameset元素中有效。</p>
+<table width="100%">
+	<tbody>
+		<tr>
+			<th width="25%">
+				属性</th>
+			<th width="15%">
+				值</th>
+			<th width="60%">
+				描述</th>
+		</tr>
+		<tr>
+			<td>
+				onload</td>
+			<td>
+				脚本</td>
+			<td>
+				当文档被载入时执行脚本</td>
+		</tr>
+		<tr>
+			<td>
+				onunload</td>
+			<td>
+				脚本</td>
+			<td>
+				当文档被卸下时执行脚本</td>
+		</tr>
+	</tbody>
+</table>
+<h3>
+	表单元素事件 (Form Element Events)</h3>
+<p>
+	仅在表单元素中有效。</p>
+<table width="100%">
+	<tbody>
+		<tr>
+			<th width="25%">
+				属性</th>
+			<th width="15%">
+				值</th>
+			<th width="60%">
+				描述</th>
+		</tr>
+		<tr>
+			<td>
+				onchange</td>
+			<td>
+				脚本</td>
+			<td>
+				当元素改变时执行脚本</td>
+		</tr>
+		<tr>
+			<td>
+				onsubmit</td>
+			<td>
+				脚本</td>
+			<td>
+				当表单被提交时执行脚本</td>
+		</tr>
+		<tr>
+			<td>
+				onreset</td>
+			<td>
+				脚本</td>
+			<td>
+				当表单被重置时执行脚本</td>
+		</tr>
+		<tr>
+			<td>
+				onselect</td>
+			<td>
+				脚本</td>
+			<td>
+				当元素被选取时执行脚本</td>
+		</tr>
+		<tr>
+			<td>
+				onblur</td>
+			<td>
+				脚本</td>
+			<td>
+				当元素失去焦点时执行脚本</td>
+		</tr>
+		<tr>
+			<td>
+				onfocus</td>
+			<td>
+				脚本</td>
+			<td>
+				当元素获得焦点时执行脚本</td>
+		</tr>
+	</tbody>
+</table>
+<h3>
+	键盘事件 (Keyboard Events)</h3>
+<p>
+	在下列元素中无效：base, bdo, br, frame, frameset, head, html, iframe, meta, param, script, style, and title elements.</p>
+<table width="100%">
+	<tbody>
+		<tr>
+			<th width="25%">
+				属性</th>
+			<th width="15%">
+				值</th>
+			<th width="60%">
+				描述</th>
+		</tr>
+		<tr>
+			<td>
+				onkeydown</td>
+			<td>
+				脚本</td>
+			<td>
+				当键盘被按下时执行脚本</td>
+		</tr>
+		<tr>
+			<td>
+				onkeypress</td>
+			<td>
+				脚本</td>
+			<td>
+				当键盘被按下后又松开时执行脚本</td>
+		</tr>
+		<tr>
+			<td>
+				onkeyup</td>
+			<td>
+				脚本</td>
+			<td>
+				当键盘被松开时执行脚本</td>
+		</tr>
+	</tbody>
+</table>
+<h3>
+	鼠标事件 (Keyboard Events)</h3>
+<p>
+	在下列元素中无效：base, bdo, br, frame, frameset, head, html, iframe, meta, param, script, style, title elements.</p>
+<table width="100%">
+	<tbody>
+		<tr>
+			<th width="25%">
+				属性</th>
+			<th width="15%">
+				值</th>
+			<th width="60%">
+				描述</th>
+		</tr>
+		<tr>
+			<td>
+				onclick</td>
+			<td>
+				脚本</td>
+			<td>
+				当鼠标被单击时执行脚本</td>
+		</tr>
+		<tr>
+			<td>
+				ondblclick</td>
+			<td>
+				脚本</td>
+			<td>
+				当鼠标被双击时执行脚本</td>
+		</tr>
+		<tr>
+			<td>
+				onmousedown</td>
+			<td>
+				脚本</td>
+			<td>
+				当鼠标按钮被松开时执行脚本</td>
+		</tr>
+		<tr>
+			<td>
+				onmousemove</td>
+			<td>
+				脚本</td>
+			<td>
+				当鼠标指针移动时执行脚本</td>
+		</tr>
+		<tr>
+			<td>
+				onmouseout</td>
+			<td>
+				脚本</td>
+			<td>
+				当鼠标指针移出某元素时执行脚本</td>
+		</tr>
+		<tr>
+			<td>
+				onmouseover</td>
+			<td>
+				脚本</td>
+			<td>
+				当鼠标指针悬停于某元素之上时执行脚本</td>
+		</tr>
+		<tr>
+			<td>
+				onmouseup</td>
+			<td>
+				脚本</td>
+			<td>
+				当鼠标按钮被松开时执行脚本</td>
+		</tr>
+	</tbody>
+</table>
+<p align="center">
+	&nbsp;</p>
+
+                        </p>
+                        <p>
+                            Praesent in lacus tellus. Nullam suscipit laoreet lacus eu placerat. Donec diam purus, rhoncus iaculis porta a, egestas non sem.
+                        </p>
+                        <blockquote>
+                            <p>Boarding this vessel is an act of war. Ergo we surrender</p> 
+                        </blockquote>
+                        <p>
+                            Cras viverra consequat elit, et blandit nulla euismod venenatis. Fusce mattis erat tempus velit aliquam faucibus. Quisque condimentum ipsum vitae ipsum feugiat sit amet vehicula ipsum ultricies. Pellentesque elementum congue mollis. Nam elementum eros vitae purus blandit lobortis. Aenean nec placerat purus. Quisque sagittis dolor id est condimentum a varius purus venenatis. Quisque luctus sapien non urna bibendum quis pulvinar eros cursus. Nulla nec dui turpis. Nulla pulvinar, purus vel ornare tincidunt, mi enim bibendum nulla, sit amet pellentesque leo erat aliquam ligula. Maecenas luctus sodales malesuada. Morbi ac justo velit, in sagittis lacus.
+                        </p>
+                        <hr />
+                        <p>
+                            <strong>Tags:</strong> Blog, Breathe, City
+                        </p>
+                    </div>
+
+                </article>
+
+
+
+
+
+
+
+
+                <!--                    Comments Section-->
+                <section id="commentSection">
+                    <div>
+                        <img src="/templets/default/images/refimages/comment3.jpg" alt="Comment" />
+                        <h6>Arnold J. Rimmer</h6>
+                        <span>17 hours ago</span>
+                        <p>Duis sollicitudin sapien a diam bibendum viverra. Donec congue iaculis porttitor. Ut est odio, ornare at pretium aliquet, posuere vitae dolor. Duis arcu velit, blandit eget suscipit dapibus, condimentum vel ligula.</p>
+                    </div>
+                    <div>
+                        <img src="/templets/default/images/refimages/comment2.jpg" alt="Comment" />
+                        <h6>Dave Lister</h6>
+                        <span>21 hours ago</span>
+                        <p>Cras viverra consequat elit, et blandit nulla euismod venenatis. Fusce mattis erat tempus velit aliquam faucibus. </p>
+                    </div>
+                    <div>
+                        <img src="/templets/default/images/refimages/comment1.jpg" alt="Comment" />
+                        <h6>Kryten</h6>
+                        <span>3 days ago</span>
+                        <p>
+                            Etiam luctus egestas nibh et ornare. Phasellus erat mauris, eleifend id facilisis sed, bibendum nec metus. Aliquam dictum elementum porttitor. Integer quam nibh, tempor eu imperdiet at, faucibus feugiat nulla. Vivamus urna felis, dignissim id gravida et, ultrices eu odio. 
+                        </p>
+                        <p>
+                            Vestibulum id ligula nulla, sed sagittis erat. Fusce tempor sodales lectus eget porttitor. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. 
+                        </p>
+                    </div>
+                </section>
+
+
+
+
+
+
+
+
+
+
+                <!--                Comment Form Section-->
+                <section id="CommentForm">
+                    <h2>Leave a comment</h2>
+                    <form action="#">
+                        <input type="text" name="name" id="name" value="" placeholder="Username" />
+                        <input type="text" name="mail" id="mail" value="" placeholder="Mail" />
+                        <textarea name="text" id="text" cols="30" rows="10" placeholder="Text" ></textarea>
+                        <input type="button" value="Submit" name="submit" />
+                    </form>
+                </section>
+                <!--    Comment form section    END  -->
+
+
+            </section>
+            <!--  Main Content     END  -->
+
+
+
+
+
+
+            <!--         Footer   -->
+            <footer data-role="footer" data-theme="a" data-position="inline">
+                <hr class="divider" />
+                <h4>Follow me on</h4>
+                <div class="ui-grid-c wrappedWidth shareIcons">
+                    <div class="ui-block-a"><a href="#"><img src="/templets/default/images/lightGreen/fb.png" alt="Facebook" /></a></div>
+                    <div class="ui-block-b"><a href="#"><img src="/templets/default/images/lightGreen/digg.png" alt="Digg" /></a></div>
+                    <div class="ui-block-c"><a href="#"><img src="/templets/default/images/lightGreen/twitter.png" alt="Twitter" /></a></div>
+                    <div class="ui-block-d"><a href="#"><img src="/templets/default/images/lightGreen/rss.png" alt="RSS" /></a></div>
+                </div>
+
+                <h4>Text Widget</h4>
+                <p>Dit augue est, elementum id commodo sit amet, pellentesque vel mi.
+                    Nulla eu ante id ligula posuere pellentesque. Vivamus rhoncus mattis tellus
+                    vitae pretium. Vestibulum ullamcorper congue nisl eget suscipit. Aenean feugiat odio 
+                    a velit scelerisque consequat. Fusce congue ipsum quis felis condimentum auctor tincidunt 
+                    erat scelerisque. Vestibulum ante ipsum <a href="#">primis in faucibus</a> orci luctus et ultrices posuere 
+                    cubilia Curae; Nullam purus eros, consequat in blandit non, adipiscing ut ipsum. In eu diam 
+                    lorem. 
+                </p>
+
+                <nav class="ui-grid-c">
+                    <div class="ui-block-a"><a href="index.html" data-transition="flip">Home</a></div>
+                    <div class="ui-block-b"><a href="portfolio.html" data-transition="flip">Portfolio</a></div>
+                    <div class="ui-block-c"><a class="navSelected" href="blog.html" data-transition="flip">Blog</a></div>
+                    <div class="ui-block-d"><a href="contact.html" data-transition="flip">Contact</a></div>
+                </nav>
+            </footer>   
+            <!--  Footer     END  -->  
+
+        </div>
+        <!--     Page initialization    END  -->
+    </body>
+</html>

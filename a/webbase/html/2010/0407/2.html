@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Breathe</title>
+        <!--        META SECTION-->
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=false" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+
+
+
+        <!--        STYLES SECTION -->
+
+        <link rel="stylesheet" href="/templets/default/css/jquery.mobile-1.0.min.css" /> 
+        <link rel="stylesheet" href="/templets/default/css/lightGreen.css" />
+
+        <!--        FONTS SECTION -->
+
+        <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+
+
+
+
+        <!--        SCRIPT SECTION -->
+
+        <script type="text/javascript" src="/templets/default/js/jquery.js"></script>
+        <script type="text/javascript" src="/templets/default/js/jquery.mobile-1.0.min.js"></script> 
+
+    </head>
+    <body>
+        <!--    Page initialization      -->
+        <div data-role="page" data-theme="a">
+
+
+
+            <!--            Header-->
+            <header data-role="header">
+                <h1>www.mooc.im</h1>
+                
+                
+                <nav class="ui-grid-c">
+                    <div class="ui-block-a"><a href="/" data-transition="flip">Home</a></div>
+                    
+                    
+                   
+                     <div class="ui-block-b"><a href='/plus/list.php?tid=6'  data-transition="flip"> Works</a></div>
+                     
+                     <div class='ui-block-b'><a href='/plus/list.php?tid=1'  rel='dropmenu1'>BLOG</a></div>
+                   
+                     <div class="ui-block-b"><a href='/plus/list.php?tid=12'  data-transition="flip"> CONTACT</a></div>
+                     
+                      
+                </nav>
+                <hr class="divider" />
+            </header>
+            
+           
+                    
+            <!--         Heder     END  -->
+
+
+
+
+            <!--            Main Content-->
+            <section data-role="content" class="wrappedWidth" id="blog-single">
+                <!--                Main Article-->
+                
+                <article>
+                    <img class="mainIMG" src="[field:litpic/]" alt="Main Blog Image" />
+                    <h2>初学者：XHTML常用标签的基本应用指南</h2>
+                    <div class="article-wrapper">
+                        <span class="date-info">2010-04-07 09:29</span>
+                        <span class="comment-info"> Comments</span>
+                        <p>
+                           　一段时间以来，发现有很多人XHTML都不会用，不光是普通的初学者，有的程序员都不是很清楚该怎么写这个XHTML，我这里呢算是把一些常见的应用问题做一个总结，也算能使得大家能在沟通，合作上能形成默契。<br /><br />　　XHTML里有很多的标签，但是经常用到的也就是那么几个，也只要掌握这几个也就可以了。下面我们一一列举：div,p,span,ul,li,dl,dt,dd,a,img,h,strong,em<br /><br />　　div&nbsp;在我的脑子里我一直把他想作是一个瓶子或是箱子，我的感觉它挺硬的。这个div没有什么特性的意义，可以使用在很多地方，也就是说他可以装不同的东西。他的正确的写法是<div></div>必需要有封口。大家都用来做布局之用，也有用来作为存放文章形成段落，实际上，这个做法并不是很好，因为作为文章的分段自然有一个特定的标签来用。那就是下面要讲的<p></p>标签，不过用DIV来再整体的包住所有的段落。这是非常实用的。<br /><br />　　p&nbsp;这是一个有特定语义的标签，表示段落，是用来区分段落的。在大部分的浏览器中对P基本上都有一个上下的边距。但是没有行首缩进，因为行首缩进只是表示段落的方式但是不是一定或是必需的。所以在用P标签的时候如果需要可以针对P设定一下行首缩进，我是推荐在文章以外的地方不要使用P，因为P是有一定语义的，如果用在别的地方恐不合适。正确的写法是<p></p><br /><br />　　span&nbsp;这也是一个非常常用的标签，这个标签可以说与div很像，没有什么特定的意义，只是他是一个级联元素，不是块级元素。我一直把它看作是一个袋子，他不像箱子那样可以有自己的宽高，他的宽高只能随着内容的多少而定，所以很像是袋子。这个标签与div正好互补。<br /><br />　　ul,li&nbsp;这是一个列表，在列表中，除了UL还OL，不过我觉得OL有点像是鸡肋。因为UL通过CSS定义一样可以有OL的数字排序效果。所以一般我不推荐使用OL，有UL就可以了。UL是块级的，他的子级li也是块级标签。正确的写法是<ul><li>< /li></ul>&nbsp;LI标签是被UL标签包裹的，在UL标签里可以有无数个LI标签，LI标签不能独立使用。并且LI标签一定要封口，这不光是美观问题，对于后期的维护也很有好处。很多程序员都不喜欢把这个LI封口。UL列表的用处主要是列举出一维的，同一类型的数据。具体的比如使用在菜单上，文章中列数的一些条例等等。在列表中有一种特别的形式与UL是不一样的。那就是下面的DL<br /><br />　　dl,dt,dd&nbsp;这是一个很特别的三个标签的组合。这里的DT是指标题，DD是指内容。DL是包课他们的容器。正确的写法是<dl><dt>< /dt><dd></dd></dl>在DL里可以有很多组的DT，DD，当出现很多组的时候尽量是一个DT 配一个DD，如果DD中内容很多，可以在DD里加P标签配合使用。DL列表是一个非常好的列表形式，可以多加利用。<br /><br />　　a&nbsp;这表示链接，是一个特定属性的，也是网页中最为神奇的标签。因为它才让无数的网页都连在了一起。正确的写法是：<a&nbsp;href=""&nbsp;title=""> </a>其中的href是表示目标地址，TITLE是鼠标悬停提示文字，这是可有可无的。但是有必是利大于无。<br /><br />　　img&nbsp; 这是图片标签，也是个特定属性的标签。正常写法是：<img&nbsp;src=""&nbsp;alt=""&nbsp;title=""/>&nbsp;这里的src是目标地址， ALT与TITLE是替换文字，ALT是&nbsp;IE特定的，TITLE是其它浏览器的通用的。不过记得后面的反斜线那是一定要有的。<br /><br />　　H&nbsp; 这是一个系列的标签，从H1到H6，一共六个，有人说太少了，有人说正好用，有人说用不了这么多。反正我是觉得差不多。正确写法是：<h> </h>主要是用来存放标题，也有一些朋友用来作它用拿来作其它用处，个人觉得这个标签还是让他安生一点，就让他做标题的作用。这六个标签之间最好不要出现什么相互包含的事。<br /><br />　　strong&nbsp;这个意思是着重，这是有语义的，作用也很简单。至于样工，是加粗着重，还是用色彩表明着重，那都是自行选择。正确的写法是<strong></strong><br /><br />　　em&nbsp;这个与strong很像，是表示强调。一般浏览器的默认值是斜体。使用方式与strong一样。写法是：<em></em><br /><br />　　这里没有说表单，因为表单基本上没有什么变化，也没什么可特别说的。
+            <p align="center"> </p>
+                        </p>
+                        <hr />
+                        <p>
+                            <strong>Tags:</strong> Blog, Breathe, City
+                        </p>
+                    </div>
+
+                </article>
+
+
+
+
+
+
+
+
+                <!--                    Comments Section-->
+                <section id="commentSection">
+                    <div>
+                        <img src="images/refimages/comment3.jpg" alt="Comment" />
+                        <h6>Arnold J. Rimmer</h6>
+                        <span>17 hours ago</span>
+                        <p>Duis sollicitudin sapien a diam bibendum viverra. Donec congue iaculis porttitor. Ut est odio, ornare at pretium aliquet, posuere vitae dolor. Duis arcu velit, blandit eget suscipit dapibus, condimentum vel ligula.</p>
+                    </div>
+                    <div>
+                        <img src="images/refimages/comment2.jpg" alt="Comment" />
+                        <h6>Dave Lister</h6>
+                        <span>21 hours ago</span>
+                        <p>Cras viverra consequat elit, et blandit nulla euismod venenatis. Fusce mattis erat tempus velit aliquam faucibus. </p>
+                    </div>
+                    <div>
+                        <img src="images/refimages/comment1.jpg" alt="Comment" />
+                        <h6>Kryten</h6>
+                        <span>3 days ago</span>
+                        <p>
+                            Etiam luctus egestas nibh et ornare. Phasellus erat mauris, eleifend id facilisis sed, bibendum nec metus. Aliquam dictum elementum porttitor. Integer quam nibh, tempor eu imperdiet at, faucibus feugiat nulla. Vivamus urna felis, dignissim id gravida et, ultrices eu odio. 
+                        </p>
+                        <p>
+                            Vestibulum id ligula nulla, sed sagittis erat. Fusce tempor sodales lectus eget porttitor. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. 
+                        </p>
+                    </div>
+                </section>
+
+
+
+
+
+
+
+
+
+
+                <!--                Comment Form Section-->
+                <section id="CommentForm">
+                    <h2>Leave a comment</h2>
+                    <form action="#">
+                        <input type="text" name="name" id="name" value="" placeholder="Username" />
+                        <input type="text" name="mail" id="mail" value="" placeholder="Mail" />
+                        <textarea name="text" id="text" cols="30" rows="10" placeholder="Text" ></textarea>
+                        <input type="button" value="Submit" name="submit" />
+                    </form>
+                </section>
+                <!--    Comment form section    END  -->
+
+
+            </section>
+            <!--  Main Content     END  -->
+
+
+
+
+
+
+            <!--         Footer   -->
+             
+<!-- //底部模板 -->
+
+  <footer data-role="footer" data-theme="a" data-position="inline">
+                <hr class="divider" />
+                <h4>Follow me on</h4>
+                <div class="ui-grid-c wrappedWidth shareIcons">
+                    <div class="ui-block-a"><a href="#"><img src="/templets/default/images/lightGreen/fb.png" alt="Facebook" /></a></div>
+                    <div class="ui-block-b"><a href="#"><img src="/templets/default/images/lightGreen/digg.png" alt="Digg" /></a></div>
+                    <div class="ui-block-c"><a href="#"><img src="/templets/default/images/lightGreen/twitter.png" alt="Twitter" /></a></div>
+                    <div class="ui-block-d"><a href="#"><img src="/templets/default/images/lightGreen/rss.png" alt="RSS" /></a></div>
+                </div>
+
+                <h4>Text Widget</h4>
+                <p>Dit augue est, elementum id commodo sit amet, pellentesque vel mi.
+                    Nulla eu ante id ligula posuere pellentesque. Vivamus rhoncus mattis tellus
+                    vitae pretium. Vestibulum ullamcorper congue nisl eget suscipit. Aenean feugiat odio 
+                    a velit scelerisque consequat. Fusce congue ipsum quis felis condimentum auctor tincidunt 
+                    erat scelerisque. Vestibulum ante ipsum <a href="#">primis in faucibus</a> orci luctus et ultrices posuere 
+                    cubilia Curae; Nullam purus eros, consequat in blandit non, adipiscing ut ipsum. In eu diam 
+                    lorem. 
+                </p>
+
+                <nav class="ui-grid-c">
+                    <div class="ui-block-a"><a href="index.html" data-transition="flip">Home</a></div>
+                    <div class="ui-block-b"><a href="portfolio.html" data-transition="flip">Portfolio</a></div>
+                    <div class="ui-block-c"><a class="navSelected" href="blog.html" data-transition="flip">Blog</a></div>
+                    <div class="ui-block-d"><a href="contact.html" data-transition="flip">Contact</a></div>
+                </nav>
+            </footer>  
+    
+            <!--  Footer     END  -->  
+
+        </div>
+        <!--     Page initialization    END  -->
+    </body>
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Breathe</title>
+        <!--        META SECTION-->
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=false" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+
+
+
+        <!--        STYLES SECTION -->
+
+        <link rel="stylesheet" href="/templets/default/css/jquery.mobile-1.0.min.css" /> 
+        <link rel="stylesheet" href="/templets/default/css/lightGreen.css" />
+
+        <!--        FONTS SECTION -->
+
+        <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+
+
+
+
+        <!--        SCRIPT SECTION -->
+
+        <script type="text/javascript" src="/templets/default/js/jquery.js"></script>
+        <script type="text/javascript" src="/templets/default/js/jquery.mobile-1.0.min.js"></script> 
+
+    </head>
+    <body>
+        <!--    Page initialization      -->
+        <div data-role="page" data-theme="a">
+
+
+
+            <!--            Header-->
+            <header data-role="header">
+                <h1>www.mooc.im</h1>
+                
+                
+                <nav class="ui-grid-c">
+                    <div class="ui-block-a"><a href="/" data-transition="flip">Home</a></div>
+                    
+                    
+                   
+                     <div class="ui-block-b"><a href='/plus/list.php?tid=6'  data-transition="flip"> Works</a></div>
+                     
+                     <div class='ui-block-b'><a href='/plus/list.php?tid=1'  rel='dropmenu1'>BLOG</a></div>
+                   
+                     <div class="ui-block-b"><a href='/plus/list.php?tid=12'  data-transition="flip"> CONTACT</a></div>
+                     
+                      
+                </nav>
+                <hr class="divider" />
+            </header>
+            
+           
+                    
+            <!--         Heder     END  -->
+
+
+
+
+            <!--            Main Content-->
+            <section data-role="content" class="wrappedWidth" id="blog-single">
+                <!--                Main Article-->
+                
+                <article>
+                    <img class="mainIMG" src="[field:litpic/]" alt="Main Blog Image" />
+                    <h2>新手学习老知识（一）HTML语言基础</h2>
+                    <div class="article-wrapper">
+                        <span class="date-info">2010-04-07 09:29</span>
+                        <span class="comment-info"> Comments</span>
+                        <p>
+                           <p align="left"><strong>一、为什么要？</strong></p><p align="left">　<span class="web"></span>　近两年来，许多公司开发出了图形化的HTML开发工具，使得网页的制作变得非常简单。如微软公司推出的 Microsoft FrontPage， Adobe公司推出的 Adobe Pagemill， Micromedia公司推出的Dreamweaver等编辑工具，都被称为“所见即所得”的工具。这些图形化的开发工具可以直接处理网页，而不用书写费劲的标记。这使得用户在没有HTML语言基础的情况下，照样可以编写网页。这时，编写HTML文档的任务由开发工具替你完成了。 <span class="web"></span>这是网页图形编辑工具的最大成功之处，但也是它们的最大不足之处。受到图形编辑工具自身的约束，将产生大量的垃圾代码。原因很简单，我举一个简单的例子你就明白了。比如：在网页设计一个表格，若是每个单元格的宽度和高度让它根据其中的内容自动确定，HTML只要你告诉它是表格和单元格的排列顺序（也就是行列数）就行了，但因为图形化开发工具无法得知你的这种特殊要求，所以只能取一般要求，把每个单元格的宽度和高度都定义起来，从而增加了许多代码。所以一个明智的网页编写者应该在掌握图形编辑工具的基础上进一步学会HTML语言，从而知道那些是垃圾代码，这样，我们就可以利用图形化HTML开发工具快速成地做出网页，又会消除无用的代码，从而达到快速制作高质量网页的目的。<span class="web"></span></p><p>　　<strong>二、如何用HTML？</strong></p><p>　　HTML语言，又称超文本标记语言，是英文Hyper Text Markup Language的缩写。HTML语言作为一种标识性的语言，是由一些特定符号和语法组成的，所以理解和掌握都是十分容易的。可以说，HTML语言在所有的计算机编程语言中是最简单易学的。 组成HTML的文档都是ASCIlI档，所以创建HTML文件十分简单，只需一个普通的字符编辑器即可。如 Wndows中的记事本、写字板都可以使用。也可以采用专用的 HTML 编辑工具：如 CoffeeHTML、 Homesite、 HTMLedit Pro等工具，它们的特点是能够自动检查HTML文档中的语法错误并协助改正。由于有了图形化的HTML开发工具，使得我们更加容易，我们可以先用它制作好网页，再在它附带的HTML代码编辑器在删去那些无用的代码，利用它的所见即所得特性，从而使我们很快就能熟炼地掌握HTML。特别是 Micromedia 公司最近发布的Dreamweaver4，可以把源代码编辑器和网页编辑器放在同一个窗口中，真是方便极了。</p><p>　　<strong>三、HTML基本概念</strong></p><p>　　1、标记<span class="web"></span></p><p>　　HTML用于描述功能的符号称为“标记”。如“HTML”、“BODY”、“TABLE”等。标记在使用是必须用方括号“<>”括起来，而且是成对出现，无斜杠的标记表示该标记的作用开始，有斜杠的标记表示该标记的作用结束。如<TABLE>表示一个表格的开始， </TABLE>表标一个表格的结束。在HTML中，标记的大小写作用相同，如<TABLE>和<table>都是表示一个表格的开始。</p><p>　　标记可以包含标记，如：表格中包含表格或其它标记，如下面这样的HTML代码结构是正确的：</p><p class="code"><table width="50%" border="10" cellspacing="10" cellpadding="10"><br /><tr><br /><td><br /><table width="100%" border="1" cellspacing="1" cellpadding="1"><br /><tr><br /><td> </td><br /><td> </td><br /><td> </td><br /></tr><br /></table><br /></td><br /><td><br /><p> </p><br /><p>hjk</p><br /><p> </p><br /></td><br /><td> </td><br /></tr><br /></table></p><p>　　但是标记不能交叉嵌套，如下面这样的代码是错误的： <span class="web"></span></p><p class="code"><div><span>这是不正确的代码</div></span></p><p>　　2、特殊字符</p><p>　　由于方括号和英文双引号被用来提示HTML的标记及参数值，那么在网页中要显示方括号和英文引号只能用其它的符号来代替，下面是常见特殊字符所代表的正常字符：</p><p class="code"><或<对应字符 <<br />>或>对应字符 ><br />"或"——对应字符 "<br />à——对应字符 A </p><p>　　3、语法 <span class="web"></span></p><p>　　一个标记，为了明确它的功能，往往用一些属性参数来描述，对这些属性参数的规定上就是所谓的语法，例如：段落标记<p>，它的语法格式是：</p><p class="code"><p align=left|center|right class=type><span class="web"></span></p><p>　　这就说明<p>标记有两个属性参数，即“align”和“class”，其中“align”用于定义段的位置是靠左、靠右还是居中。默认值是靠左。而“class ”则是定义所属的类型。在实际应用时当然可以没有“align”和“class”参数，按照默认情况显示，这一点非常重要，这是我们判断无用代码的主要标准之一，假如在网页代码中有对默认值进行描述设置的语句代码，显然是无用的代码。另外，在设置标记的属性值时，若是取默认值不影响效果或影响很少，我们就尽量取默认值，这样可以不用设置，从而达到减少代码的目的。</p><p>　　标记参数的具体的值都有要加西文引号，如：要使段落内容居中，正确的写法是这样的： <span class="web"></span></p><p class="code"><p align="center">段落内容居中示例</p> <span class="web"></span> </p><p>　　学好用好HTML语言的关键是灵活应用标记的参数。特别是默认值的应用。</p>
+            <p align="center"> </p>
+                        </p>
+                        <hr />
+                        <p>
+                            <strong>Tags:</strong> Blog, Breathe, City
+                        </p>
+                    </div>
+
+                </article>
+
+
+
+
+
+
+
+
+                <!--                    Comments Section-->
+                <section id="commentSection">
+                    <div>
+                        <img src="images/refimages/comment3.jpg" alt="Comment" />
+                        <h6>Arnold J. Rimmer</h6>
+                        <span>17 hours ago</span>
+                        <p>Duis sollicitudin sapien a diam bibendum viverra. Donec congue iaculis porttitor. Ut est odio, ornare at pretium aliquet, posuere vitae dolor. Duis arcu velit, blandit eget suscipit dapibus, condimentum vel ligula.</p>
+                    </div>
+                    <div>
+                        <img src="images/refimages/comment2.jpg" alt="Comment" />
+                        <h6>Dave Lister</h6>
+                        <span>21 hours ago</span>
+                        <p>Cras viverra consequat elit, et blandit nulla euismod venenatis. Fusce mattis erat tempus velit aliquam faucibus. </p>
+                    </div>
+                    <div>
+                        <img src="images/refimages/comment1.jpg" alt="Comment" />
+                        <h6>Kryten</h6>
+                        <span>3 days ago</span>
+                        <p>
+                            Etiam luctus egestas nibh et ornare. Phasellus erat mauris, eleifend id facilisis sed, bibendum nec metus. Aliquam dictum elementum porttitor. Integer quam nibh, tempor eu imperdiet at, faucibus feugiat nulla. Vivamus urna felis, dignissim id gravida et, ultrices eu odio. 
+                        </p>
+                        <p>
+                            Vestibulum id ligula nulla, sed sagittis erat. Fusce tempor sodales lectus eget porttitor. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. 
+                        </p>
+                    </div>
+                </section>
+
+
+
+
+
+
+
+
+
+
+                <!--                Comment Form Section-->
+                <section id="CommentForm">
+                    <h2>Leave a comment</h2>
+                    <form action="#">
+                        <input type="text" name="name" id="name" value="" placeholder="Username" />
+                        <input type="text" name="mail" id="mail" value="" placeholder="Mail" />
+                        <textarea name="text" id="text" cols="30" rows="10" placeholder="Text" ></textarea>
+                        <input type="button" value="Submit" name="submit" />
+                    </form>
+                </section>
+                <!--    Comment form section    END  -->
+
+
+            </section>
+            <!--  Main Content     END  -->
+
+
+
+
+
+
+            <!--         Footer   -->
+             
+<!-- //底部模板 -->
+
+  <footer data-role="footer" data-theme="a" data-position="inline">
+                <hr class="divider" />
+                <h4>Follow me on</h4>
+                <div class="ui-grid-c wrappedWidth shareIcons">
+                    <div class="ui-block-a"><a href="#"><img src="/templets/default/images/lightGreen/fb.png" alt="Facebook" /></a></div>
+                    <div class="ui-block-b"><a href="#"><img src="/templets/default/images/lightGreen/digg.png" alt="Digg" /></a></div>
+                    <div class="ui-block-c"><a href="#"><img src="/templets/default/images/lightGreen/twitter.png" alt="Twitter" /></a></div>
+                    <div class="ui-block-d"><a href="#"><img src="/templets/default/images/lightGreen/rss.png" alt="RSS" /></a></div>
+                </div>
+
+                <h4>Text Widget</h4>
+                <p>Dit augue est, elementum id commodo sit amet, pellentesque vel mi.
+                    Nulla eu ante id ligula posuere pellentesque. Vivamus rhoncus mattis tellus
+                    vitae pretium. Vestibulum ullamcorper congue nisl eget suscipit. Aenean feugiat odio 
+                    a velit scelerisque consequat. Fusce congue ipsum quis felis condimentum auctor tincidunt 
+                    erat scelerisque. Vestibulum ante ipsum <a href="#">primis in faucibus</a> orci luctus et ultrices posuere 
+                    cubilia Curae; Nullam purus eros, consequat in blandit non, adipiscing ut ipsum. In eu diam 
+                    lorem. 
+                </p>
+
+                <nav class="ui-grid-c">
+                    <div class="ui-block-a"><a href="index.html" data-transition="flip">Home</a></div>
+                    <div class="ui-block-b"><a href="portfolio.html" data-transition="flip">Portfolio</a></div>
+                    <div class="ui-block-c"><a class="navSelected" href="blog.html" data-transition="flip">Blog</a></div>
+                    <div class="ui-block-d"><a href="contact.html" data-transition="flip">Contact</a></div>
+                </nav>
+            </footer>  
+    
+            <!--  Footer     END  -->  
+
+        </div>
+        <!--     Page initialization    END  -->
+    </body>
+</html>

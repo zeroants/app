@@ -1,0 +1,1 @@
+[field:global runphp='yes' name=autoindex]$a="<li class='top'><em>"; $b="0";$c="<li><em>";if (@me > 3) @me = $c.$b.@me; else @me = $a.$b.@me;[/field:global]</em><a href="[field:arcurl/]" target="_blank" title="[field:title/]">[field:title/]</a></li>
